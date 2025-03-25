@@ -11,7 +11,7 @@ const socialLinks = [
 ];
 
 const navLinks = [
-    { name: "About", link: "#" },
+    { name: "About", link: "/about" },
     { name: "Experience", link: "#" },
     { name: "Join Community", link: "/contact" },
 ]

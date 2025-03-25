@@ -7,9 +7,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
-    { name: "About", link: "#" },
-    { name: "Partners", link: "#" },
-    { name: "Impact", link: "#" },
+    { name: "About", link: "/about" },
+    { name: "Partners", link: "/partners" },
+    { name: "Impact", link: "/impact" },
     { name: "Engage with us", link: "/contact" },
 ];
 
@@ -50,7 +50,7 @@ export default function Navbar() {
         <nav className={`fixed w-full px-4 md:px-8 lg:px-16 py-4 z-50 transition-all duration-300 flex items-center justify-between
         ${isOutsideHero ? 'bg-white shadow-xl shadow-[rgba(0,0,0,0.025)]' : 'bg-gradient-to-b from-[rgba(255,255,255,0.2)] to-transparent'} 
         ${isHidden && !isOpen ? '-translate-y-full' : 'translate-y-0'}`}>
-            <div>
+            <Link href="/">
                 <Image
                     src={WhiteLogo}
                     alt="logo"
@@ -65,7 +65,7 @@ export default function Navbar() {
                     height={100}
                     className={`w-fit h-[2.5rem] md:h-[3.5rem] ${isScrolled ? 'block' : 'hidden'}`}
                 />
-            </div>
+            </Link>
 
             <div className="flex items-center gap-6">
                 <div className="hidden md:flex items-center gap-6">
@@ -116,6 +116,7 @@ export default function Navbar() {
                             <Link
                                 href={item.link}
                                 key={item.name}
+                                onClick={() => setIsOpen(false)}
                                 className={`text-black w-fit font-medium hover:text-[var(--orange)]`}
                             >
                                 {item.name}

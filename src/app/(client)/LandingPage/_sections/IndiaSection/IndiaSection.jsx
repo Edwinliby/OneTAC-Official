@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import slide1 from "../../../../../../public/assets/slide_1.webp";
 import slide2 from "../../../../../../public/assets/slide_2.webp";
 import Marquee from "react-fast-marquee";
@@ -33,7 +34,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }} 
+                viewport={{ once: true }}
                 className="px-4 sm:px-8 md:px-16 text-left"
             >
                 <h1 className="relative text-[2rem] md:text-5xl font-medium leading-tight mb-4 text-[var(--brown)]">
@@ -42,7 +43,7 @@ export default function Home() {
                         initial={{ scaleX: 0 }}
                         whileInView={{ scaleX: 1 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-                        viewport={{ once: true }} 
+                        viewport={{ once: true }}
                         className="absolute block top-7 md:top-10 left-0 bg-amber-200 w-1/2 md:w-1/4 h-6 rounded-lg -z-10"
                     />
                 </h1>
@@ -52,7 +53,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }} 
+                viewport={{ once: true }}
                 className="flex items-center justify-center px-4 sm:px-8 md:px-16"
             >
                 <div className="flex justify-center md:justify-between flex-wrap w-full">
@@ -62,7 +63,7 @@ export default function Home() {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
-                            viewport={{ once: true }} 
+                            viewport={{ once: true }}
                             className="flex flex-col items-center text-center p-4 w-fit"
                         >
                             <p className="relative font-medium md:text-lg text-[#333]">{item.label}</p>
@@ -90,7 +91,7 @@ export default function Home() {
                                 initial={{ opacity: 0, x: -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                                viewport={{ once: true }} 
+                                viewport={{ once: true }}
                             >
                                 <Image
                                     src={item.img1}
@@ -104,19 +105,19 @@ export default function Home() {
                     </div>
                 </Marquee>
 
-                <motion.button
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    viewport={{ once: true }} 
+                    viewport={{ once: true }}
                     className={`
                         absolute w-fit z-10 bg-[var(--light-Orange)] border border-white text-[var(--brown)]
                         md:text-lg font-semibold py-3 px-10 rounded-lg cursor-pointer transition duration-300 shadow-lg
                         hover:-translate-y-2 hover:border-[var(--light-Orange)] hover:shadow-2xl hover:bg-amber-200
                     `}
                 >
-                    Explore the possibilities
-                </motion.button>
+                    <Link href='/contact'>Join the movement</Link>
+                </motion.div>
             </motion.section>
         </div>
     );

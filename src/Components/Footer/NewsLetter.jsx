@@ -8,7 +8,7 @@ const Newsletter = () => {
     const [isFocused, setIsFocused] = useState(false);
 
     return (
-        <div className="flex flex-col gap-4 items-end w-full md:w-fit">
+        <div className="flex flex-col gap-4 md:items-end w-full md:w-fit">
             <h4 className="text-lg font-semibold">Subscribe to Our Newsletter</h4>
             <div className="flex gap-2 font-medium w-full md:w-fit">
                 <span className="relative w-full md:w-fit">
