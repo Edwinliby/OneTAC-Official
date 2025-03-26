@@ -30,8 +30,8 @@ export default function P1Section() {
     return (
         <div className="flex flex-col gap-10 md:gap-16 px-4 py-10 md:p-8 lg:p-16">
             <div>
-                <h2 className="text-3xl md:text-4xl font-semibold text-[var(--brown)] mb-8">Founding Partners</h2>
-                <p className="text-base md:text-lg lg:text-xl">
+                <h2 className="text-[2rem] md:text-4xl lg:text-5xl font-semibold text-[var(--brown)] mb-8">Founding Partners</h2>
+                <p className="md:text-md xl:text-xl">
                     All founding partners are registered Section 8 non-profit companies, committed to public purpose and open digital ecosystems. ONE TAC is co-created by a pioneering consortium of mission-driven institutions dedicated to building decentralized and inclusive infrastructure for Tourism, Art, and Culture.
                 </p>
             </div>
@@ -60,7 +60,7 @@ export default function P1Section() {
                     </motion.div>
                 ))}
             </motion.div>
-            <p className="text-base md:text-lg lg:text-xl">
+            <p className="md:text-md xl:text-xl">
                 These organizations form the core engine of ONE TAC — combining thought leadership, field execution, and a commitment to citizen-first development.
             </p>
         </div>

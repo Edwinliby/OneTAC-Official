@@ -35,9 +35,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="px-4 sm:px-8 md:px-16 text-left"
+                className="px-4 md:px-8 lg:px-16 text-left"
             >
-                <h1 className="relative text-[2rem] md:text-5xl font-medium leading-tight mb-4 text-[var(--brown)]">
+                <h1 className="relative text-[2rem] md:text-4xl lg:text-5xl font-medium leading-tight mb-4 text-[var(--brown)]">
                     India's stories deserve a stage.{isWideScreen && <br />} Together we can
                     <motion.span
                         initial={{ scaleX: 0 }}
@@ -67,7 +67,7 @@ export default function Home() {
                             className="flex flex-col items-center text-center p-4 w-fit"
                         >
                             <p className="relative font-medium md:text-lg text-[#333]">{item.label}</p>
-                            <h2 className="font-argaka text-[8rem] md:text-[4rem] lg:text-[6rem] xl:text-[10rem] w-fit">
+                            <h2 className="font-argaka text-[8rem] md:text-[7rem] xl:text-[10rem] w-fit">
                                 {item.value}
                                 <span className="text-[var(--orange)]">{item.span}</span>
                             </h2>

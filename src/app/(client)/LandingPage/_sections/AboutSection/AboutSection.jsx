@@ -63,7 +63,7 @@ export default function AboutSection() {
                     About Us
                     <span className="absolute left-1 -bottom-[.005rem] rounded-2xl w-full h-2 -z-10 bg-amber-200"></span>
                 </p>
-                <h2 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-[var(--brown)] font-medium xl:leading-14">
+                <h2 className="text-[2rem] md:text-4xl lg:text-5xl text-[var(--brown)] font-medium xl:leading-14">
                     OneTAC - India's <br />
                     UPI Moment for Tourism
                 </h2>

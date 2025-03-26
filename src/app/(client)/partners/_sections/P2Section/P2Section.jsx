@@ -23,8 +23,8 @@ export default function P2Section() {
     return (
         <div className="flex flex-col gap-10 md:gap-16 px-4 py-10 md:p-8 lg:p-16">
             <div>
-                <h2 className="text-3xl md:text-4xl font-semibold text-[var(--brown)] mb-8">Strategic Ecosystem Partners</h2>
-                <p className="text-base md:text-lg lg:text-xl">
+                <h2 className="text-[2rem] md:text-4xl lg:text-5xl font-semibold text-[var(--brown)] mb-8">Strategic Ecosystem Partners</h2>
+                <p className="md:text-md xl:text-xl">
                     ONE TAC is further strengthened by a diverse ecosystem of strategic partners across <b>infrastructure, research, entrepreneurship, investment, and community mobilization</b>.
                 </p>
             </div>

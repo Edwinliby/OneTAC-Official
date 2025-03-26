@@ -52,7 +52,7 @@ export default function VillageSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-[var(--brown)] text-3xl md:text-4xl font-semibold"
+                className="text-[var(--brown)] text-[2rem] md:text-4xl lg:text-5xl font-medium"
             >
                 Every village has a story. {isWideScreen && <br />}
                 {" "}OneTAC helps the world hear it.
@@ -65,7 +65,7 @@ export default function VillageSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
                 viewport={{ once: true }}
-                className="relative overflow-x-scroll flex gap-4 scrollbar-hide cursor-grab active:cursor-grabbing scroll-smooth"
+                className="relative overflow-x-scroll overflow-y-hidden flex gap-4 scrollbar-hide cursor-grab active:cursor-grabbing scroll-smooth"
                 onMouseDown={handleMouseDown}
                 onMouseLeave={handleMouseLeave}
                 onMouseUp={handleMouseUp}
@@ -110,7 +110,7 @@ export default function VillageSection() {
                         />
                         <div className="w-full absolute bottom-0 left-0 z-10 text-white flex flex-col gap-1 p-4 bg-gradient-to-t from-black">
                             <b className="text-lg">{card.place}</b>
-                            <p className="text-xs md:test-md text-gray-500 md:text-gray-200">{card.desc}</p>
+                            <p className="text-xs md:test-md text-gray-300 md:text-gray-200">{card.desc}</p>
                             <div className="absolute bottom-0 -z-10 left-0 w-full h-[150%] bg-gradient-to-t from-black"></div>
                         </div>
                     </motion.div>
