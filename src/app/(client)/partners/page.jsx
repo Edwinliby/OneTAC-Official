@@ -15,7 +15,7 @@ export default function page() {
             />
             <P1Section />
             <P2Section />
-            {/* <JoinSection /> */}
+            <JoinSection />
             <InfoSection />
         </>
     )
