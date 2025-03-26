@@ -4,18 +4,17 @@ import Image from "next/image"
 import Link from "next/link"
 import { Sparkle, Link2 } from "lucide-react"
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
 import Img1 from '../../../../../../public/assets/1.webp'
 import Img2 from '../../../../../../public/assets/16.webp'
 
 const list = [
     {
         text: "Tourism drives 9% of India's GDP. Imagine doubling it—equitably.",
-        link: "#",
+        link: "https://wttc.org/research/economic-impact",
     },
     {
         text: "India has 10 million artisans. Only 2% are digitally visible.",
-        link: "#",
+        link: "https://texmin.nic.in/sites/default/files/English%20Final%20MOT%20Annual%20Report%202022-23%20%28English%29_0.pdf",
     },
 ]
 
@@ -77,12 +76,12 @@ export default function AboutSection() {
                             <li className="flex items-start md:items-center gap-2 text-sm" key={index}>
                                 <Sparkle size={15} className="bg-[var(--orange)] text-white w-6 h-6 p-1 rounded-4xl" />
                                 {item.text}
-                                <Link href={item.link} className="hover:text-[var(--orange)]"> <Link2 size={18} className="-rotate-45" /></Link>
+                                <Link href={item.link} rel="noopener noreferrer" target="_blank" className="hover:text-[var(--orange)]"> <Link2 size={18} className="-rotate-45" /></Link>
                             </li>
                         ))
                     }
                 </ul>
-                <Link href=''
+                <Link href='/about'
                     className="flex items-center gap-2 shadow-xl w-fit bg-[var(--light-Orange)] text-[var(--brown)] font-semibold rounded-md px-6 py-3 hover:-translate-y-1 transition-all duration-200"
                 >Know more</Link>
             </motion.div>

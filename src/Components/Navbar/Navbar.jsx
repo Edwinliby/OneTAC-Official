@@ -5,6 +5,7 @@ import WhiteLogo from '@/../public/assets/logo_white.webp';
 import ColorLogo from '@/../public/assets/logo_color.webp';
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
     { name: "About", link: "/about" },
@@ -14,9 +15,9 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-    const [isScrolled, setIsScrolled] = useState(false);
+    const pathname = usePathname();
     const [isHidden, setIsHidden] = useState(false);
-    const [isOutsideHero, setIsOutsideHero] = useState(false);
+    const [isOutsideHero, setIsOutsideHero] = useState(pathname === '/privacy-policy');
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleNavbar = () => {
@@ -24,6 +25,12 @@ export default function Navbar() {
     };
 
     useEffect(() => {
+        // If on the privacy-policy page, set isOutsideHero to true permanently
+        if (pathname === '/privacy-policy') {
+            setIsOutsideHero(true);
+            return; // Stop further execution to avoid unnecessary scroll updates
+        }
+
         let lastScrollY = window.scrollY;
 
         const handleScroll = () => {
@@ -31,20 +38,15 @@ export default function Navbar() {
             const heroSection = document.getElementById("hero");
             const heroHeight = heroSection ? heroSection.offsetHeight : 0;
 
-            if (currentScrollY > lastScrollY && currentScrollY > 200) {
-                setIsHidden(true);
-            } else {
-                setIsHidden(false);
-            }
-
-            setIsScrolled(currentScrollY > 200);
+            setIsHidden(currentScrollY > lastScrollY && currentScrollY > 200);
             setIsOutsideHero(currentScrollY > heroHeight);
+
             lastScrollY = currentScrollY;
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [pathname]);
 
     return (
         <nav className={`fixed w-full px-4 md:px-8 lg:px-16 py-4 z-50 transition-all duration-300 flex items-center justify-between
@@ -56,14 +58,14 @@ export default function Navbar() {
                     alt="logo"
                     width={100}
                     height={100}
-                    className={`w-fit h-[2.5rem] md:h-[3.5rem] ${isScrolled ? 'hidden' : 'block'}`}
+                    className={`w-fit h-[2.5rem] md:h-[3.5rem] ${isOutsideHero ? 'hidden' : 'block'}`}
                 />
                 <Image
                     src={ColorLogo}
                     alt="logo"
                     width={100}
                     height={100}
-                    className={`w-fit h-[2.5rem] md:h-[3.5rem] ${isScrolled ? 'block' : 'hidden'}`}
+                    className={`w-fit h-[2.5rem] md:h-[3.5rem] ${isOutsideHero ? 'block' : 'hidden'}`}
                 />
             </Link>
 

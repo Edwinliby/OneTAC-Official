@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import test from '../../../../../../public/assets/7.webp'
+import { mediaData } from './mediaData'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -11,32 +11,6 @@ import 'swiper/css/navigation';
 
 import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 
-const data = [
-    {
-        img: test,
-        link: "https://yourstory.com/2024/12/decentralising-indias-digital-landscape-innovation",
-        title: "Bengaluru Tech Summit '24",
-        desc: "Future of India's tourism: Innovations in open networks and digital infrastructure"
-    },
-    {
-        img: test,
-        link: "https://www.deccanherald.com/india/karnataka/karnataka-budget-cm-proposes-to-leverage-coastal-heritage-tourism-3436568",
-        title: "Karnataka Budget Announcement ",
-        desc: "OneTAC (tourism, art and culture) digital grid will be used to collect complete information about popular tourist spots in the state."
-    },
-    {
-        img: test,
-        link: "https://www.youtube.com/watch?v=jcm_LlRuH9Q",
-        title: "Panel Discussion on OneTAC",
-        desc: "Industry leaders and change-makers discussing the potential of OneTAC"
-    },
-    {
-        img: test,
-        link: "https://www.youtube.com/watch?v=jcm_LlRuH9Q",
-        title: "Panel Discussion on OneTAC",
-        desc: "Industry leaders and change-makers discussing the potential of OneTAC"
-    },
-]
 
 export default function App() {
     const [isPrevButtonFaded, setIsPrevButtonFaded] = useState(true);
@@ -75,10 +49,10 @@ export default function App() {
                 }}
                 modules={[Pagination, Navigation, Autoplay]}
                 className="mySwiper"
-                onNavigationPrev={() => setIsPrevButtonFaded(false)}
+                onNavigationNext={() => setIsPrevButtonFaded(false)}
             >
                 {
-                    data.map((item, key) => (
+                    mediaData.map((item, key) => (
                         <SwiperSlide key={key}>
                             <Link href={item.link} target="_blank" rel='noreferrer'>
                                 <div className='flex flex-col gap-2'>

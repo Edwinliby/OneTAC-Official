@@ -1,8 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
-import FooterLogo from "@/../public/assets/footer_logo.svg";
 import { MoveUpRight } from "lucide-react"
 import Newsletter from "./NewsLetter";
+import FooterLogo from "./logo";
 
 const socialLinks = [
     { name: "Instagram", link: "https://www.instagram.com/" },
@@ -56,18 +55,13 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="h-fit w-full">
-                <Image
-                    src={FooterLogo}
-                    alt="Logo"
-                    width={800}
-                    height={500}
-                    className="h-full w-full object-cover"
-                />
-            </div>
+            <FooterLogo />
 
             <div className="flex flex-col-reverse md:flex-row gap-4 md:items-end justify-between font-medium">
-                <p className="text-xs">© {new Date().getFullYear()}. All rights reserved.</p>
+                <p className="text-xs">©
+                    {new Date().getFullYear()}. All rights reserved. |
+                    <Link href="/privacy-policy" className="hover:text-[var(--brown)]"> Privacy policy</Link>
+                </p>
                 <div className="flex items-center gap-6">
                     {
                         socialLinks.map((link) => (

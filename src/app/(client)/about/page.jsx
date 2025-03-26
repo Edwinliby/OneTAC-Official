@@ -1,6 +1,14 @@
+import Img from '../../../../public/assets/26.webp'
+import Head from "@/Components/Head/Head";
 
 export default function page() {
     return (
-        <div>page</div>
+        <>
+            <Head
+                img={Img}
+                title={"OneTAC: Digital Backbone For India's Tourism, Arts, and Culture."}
+                subTitle={"Built on open protocols, powered by innovation, designed for scale."}
+            />
+        </>
     )
 }

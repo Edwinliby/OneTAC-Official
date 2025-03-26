@@ -3,40 +3,8 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import test from "../../../../../../public/assets/1.webp";
-
-const cards = [
-    {
-        img: test,
-        vid: "/videoBg.webm",
-        place: "Kerala",
-        desc: "Vibrant masks and rhythmic tales of a 500-year-old art.",
-    },
-    {
-        img: test,
-        vid: "/videoBg.webm",
-        place: "Uttar Pradesh",
-        desc: "Sacred temples and timeless spirituality on the banks of Ganga rituals.",
-    },
-    {
-        img: test,
-        vid: "/videoBg.webm",
-        place: "Tamil Nadu",
-        desc: "Windswept ruins and serene shores at the edge of India.",
-    },
-    {
-        img: test,
-        vid: "/videoBg.webm",
-        place: "Kerala",
-        desc: "Vibrant masks and rhythmic tales of a 500-year-old art.",
-    },
-    {
-        img: test,
-        vid: "/videoBg.webm",
-        place: "Uttar Pradesh",
-        desc: "Sacred temples and timeless spirituality on the banks of Ganga rituals.",
-    },
-];
+import { CirclePlay, Play } from "lucide-react";
+import { cardData } from "./data";
 
 export default function VillageSection() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -80,7 +48,6 @@ export default function VillageSection() {
             viewport={{ once: true }}
             className="flex flex-col gap-10 md:gap-16 px-4 py-10 lg:py-24 md:p-8 lg:p-16"
         >
-            {/* Title */}
             <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +73,7 @@ export default function VillageSection() {
                 onMouseMove={handleMouseMove}
                 style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
-                {cards.map((card, index) => (
+                {cardData.map((card, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 30 }}
@@ -117,6 +84,16 @@ export default function VillageSection() {
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
+                        <button
+                            className={`
+                                 z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-12 h-12 backdrop-blur-sm bg-amber-50/10 border-2 border-[var(--orange)] rounded-full
+                                ${hoveredIndex === index ? "opacity-0" : "opacity-100"
+                                }`}
+                        >
+                            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="#FBC04E" xmlns="http://www.w3.org/2000/svg">
+                                <polygon points="8,5 19,12 8,19" />
+                            </svg>
+                        </button>
                         <Image
                             src={card.img}
                             alt="Video Placeholder"
