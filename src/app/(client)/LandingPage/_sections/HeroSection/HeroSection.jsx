@@ -42,13 +42,13 @@ export default function HeroSection() {
                 </div>
 
                 <motion.div
-                    className="flex flex-col items-center gap-4 px-4 w-full absolute top-[35%] left-[50%] translate-x-[-50%] text-center"
+                    className="flex flex-col items-center gap-7 px-4 w-full absolute top-[35%] left-[50%] translate-x-[-50%] text-center"
                     style={{ opacity, translateY }}
                 >
                     <p className="italic font-bold px-8 text-xs md:text-sm">
                         “Tourism, Art & Culture — Powered by People, Not Just Platforms.”
                     </p>
-                    <h1 className="w-full md:w-[90%] lg:w-3/4 font-telma text-4xl md:text-6xl xl:text-7xl">
+                    <h1 className="w-full md:w-[90%] lg:w-3/4 2xl:w-1/2 font-telma text-4xl md:text-6xl xl:text-[4.25rem]">
                         Unlock India's soul One experience at a time
                     </h1>
                 </motion.div>

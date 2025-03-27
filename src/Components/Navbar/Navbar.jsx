@@ -25,10 +25,10 @@ export default function Navbar() {
     };
 
     useEffect(() => {
-        // If on the privacy-policy page, set isOutsideHero to true permanently
+        // If on privacy-policy page, set isOutsideHero to true
         if (pathname === '/privacy-policy') {
             setIsOutsideHero(true);
-            return; // Stop further execution to avoid unnecessary scroll updates
+            return; 
         }
 
         let lastScrollY = window.scrollY;
@@ -56,6 +56,7 @@ export default function Navbar() {
                 <Image
                     src={WhiteLogo}
                     alt="logo"
+                    draggable={false}
                     width={100}
                     height={100}
                     className={`w-fit h-[2.5rem] md:h-[3.5rem] ${isOutsideHero ? 'hidden' : 'block'}`}
@@ -63,6 +64,7 @@ export default function Navbar() {
                 <Image
                     src={ColorLogo}
                     alt="logo"
+                    draggable={false}
                     width={100}
                     height={100}
                     className={`w-fit h-[2.5rem] md:h-[3.5rem] ${isOutsideHero ? 'block' : 'hidden'}`}

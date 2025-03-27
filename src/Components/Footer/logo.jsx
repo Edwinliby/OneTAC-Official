@@ -17,7 +17,7 @@ export default function FooterLogo() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="w-full h-fit"
         >
-            <Image src={Logo} alt="Logo" width={100} height={100} className="h-full w-full object-cover" />
+            <Image src={Logo} draggable={false} alt="Logo" width={100} height={100} className="h-full w-full object-cover" />
         </motion.div>
     );
 };

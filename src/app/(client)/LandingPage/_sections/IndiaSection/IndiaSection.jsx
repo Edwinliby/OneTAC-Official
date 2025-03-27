@@ -84,7 +84,7 @@ export default function Home() {
                 className="relative flex flex-col gap-14 items-center justify-center"
             >
                 <Marquee>
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 xl:gap-5">
                         {images.map((item, index) => (
                             <motion.div
                                 key={`image-${index}`}
@@ -96,9 +96,10 @@ export default function Home() {
                                 <Image
                                     src={item.img1}
                                     alt="image"
+                                    draggable={false}
                                     width={800}
                                     height={800}
-                                    className="w-full md:h-[30rem] object-cover opacity-50"
+                                    className="w-full md:h-[30rem] xl:h-[40rem] object-cover opacity-50"
                                 />
                             </motion.div>
                         ))}

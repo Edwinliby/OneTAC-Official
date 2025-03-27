@@ -45,6 +45,7 @@ export default function P2Section() {
                         <Image
                             src={item.img}
                             alt="image"
+                            draggable={false}
                             width={600}
                             height={600}
                             className="w-fit h-1/4 object-contain"

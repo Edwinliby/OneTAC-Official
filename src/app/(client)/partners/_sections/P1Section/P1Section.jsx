@@ -54,6 +54,7 @@ export default function P1Section() {
                             src={item}
                             alt="image"
                             width={600}
+                            draggable={false}
                             height={600}
                             className="w-fit md:h-1/2 object-contain"
                         />

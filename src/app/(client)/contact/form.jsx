@@ -238,20 +238,18 @@ export default function Form() {
                         </div>
 
                         {/* Submit Button */}
-                        <div>
-                            <button
-                                type="submit"
-                                disabled={isSubmitting}
-                                className={`w-full flex justify-center p-4 border border-transparent rounded-md shadow-xs font-semibold transition-all duration-200 text-[var(--brown)] 
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className={`w-full flex justify-center p-4 border border-transparent rounded-md shadow-xs font-semibold transition-all duration-200 text-[var(--brown)] 
                                     ${isSubmitting
-                                        ? 'bg-gray-300 cursor-not-allowed'
-                                        : 'bg-[var(--light-Orange)] hover:bg-[var(--orange)]'
-                                    } 
+                                    ? 'bg-gray-300 cursor-not-allowed'
+                                    : 'bg-[var(--light-Orange)] hover:bg-[var(--orange)]'
+                                } 
                                         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500`}
-                            >
-                                {isSubmitting ? 'Submitting...' : 'Submit'}
-                            </button>
-                        </div>
+                        >
+                            {isSubmitting ? 'Submitting...' : 'Submit'}
+                        </button>
                     </form>
                 </div>
             </div>

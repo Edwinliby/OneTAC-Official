@@ -19,6 +19,7 @@ export default function PartnerSection() {
                         <Image
                             key={`partner-${index}`}
                             src={item}
+                            draggable={false}
                             alt={`partner-${index}`}
                             className="h-14 w-fit md:h-20 px-4 mix-blend-color-burn object-contain"
                         />

@@ -31,6 +31,7 @@ export default function AboutSection() {
                 <Image
                     src={Img1}
                     alt="image"
+                    draggable={false}
                     width={500}
                     height={500}
                     className="w-[90%] md:w-[85%] h-full object-cover rounded-2xl"
@@ -45,6 +46,7 @@ export default function AboutSection() {
                     <Image
                         src={Img2}
                         alt="image"
+                        draggable={false}
                         width={500}
                         height={500}
                         className="z-10 object-cover rounded-2xl border-4 border-[var(--background)]"

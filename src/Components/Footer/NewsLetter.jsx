@@ -30,7 +30,7 @@ const Newsletter = () => {
                         className="w-full md:w-fit px-4 py-3 text-sm rounded-md bg-white text-gray-800 border-none focus:outline-none focus:ring-0"
                     />
                 </span>
-                <button className="bg-[var(--orange)] hover:bg-orange-300 hover:shadow-md transition-all duration-200 text-[var(--brown)] text-xs lg:text-base px-4 py-2 rounded-md">
+                <button className="bg-[var(--light-Orange)] hover:bg-[var(--orange)] hover:shadow-md transition-all duration-200 text-[var(--brown)] text-xs md:text-base lg:text-lg px-5 py-2 rounded-md">
                     Subscribe
                 </button>
             </div>
