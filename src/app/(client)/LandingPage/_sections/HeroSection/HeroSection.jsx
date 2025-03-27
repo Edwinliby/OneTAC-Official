@@ -46,10 +46,11 @@ export default function HeroSection() {
                     style={{ opacity, translateY }}
                 >
                     <p className="italic font-bold px-8 text-xs md:text-sm">
-                        “Tourism, Art & Culture — Powered by People, Not Just Platforms.”
+                        “Discover more. Connect more. Experience more—with OneTAC”
                     </p>
-                    <h1 className="w-full md:w-[90%] lg:w-3/4 2xl:w-1/2 font-telma text-4xl md:text-6xl xl:text-[4.25rem]">
-                        Unlock India's soul One experience at a time
+                    <h1 className="w-full md:w-[90%] text-center lg:w-3/4 2xl:w-1/2 font-telma text-4xl md:text-6xl xl:text-7xl sm:whitespace-nowrap">
+                        Unlock India's soul <br />
+                        <span className="relative sm:-left-6">One experience at a time</span>
                     </h1>
                 </motion.div>
 

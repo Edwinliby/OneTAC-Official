@@ -9,11 +9,11 @@ import Img2 from '../../../../../../public/assets/16.webp'
 
 const list = [
     {
-        text: "Tourism drives 9% of India's GDP. Imagine doubling it—equitably.",
+        text: "Tourism supports 70 million jobs, yet only drives 1.77% of India's GDP",
         link: "https://wttc.org/research/economic-impact",
     },
     {
-        text: "India has 10 million artisans. Only 2% are digitally visible.",
+        text: "India has 10 million artisans, yet only 2% are digitally visible",
         link: "https://texmin.nic.in/sites/default/files/English%20Final%20MOT%20Annual%20Report%202022-23%20%28English%29_0.pdf",
     },
 ]
@@ -70,7 +70,7 @@ export default function AboutSection() {
                     UPI Moment for Tourism
                 </h2>
                 <p className="md:text-md xl:text-xl">
-                    OneTAC is a unified network transforming tourism by making India's stories, experiences, and opportunities accessible to all. It fuels startups to innovate—turning tourism into India's next economic revolution, empowering travelers to discover hidden gems.
+                    OneTAC is a pan-India digital grid that seamlessly connects tourism, arts, and culture (TAC) —unlocking a UPI-like transformation for India's services economy, turning tourism into India's next economic revolution, empowering travelers to discover hidden gems.
                 </p>
                 <ul className="flex flex-col gap-6">
                     {
@@ -83,6 +83,9 @@ export default function AboutSection() {
                         ))
                     }
                 </ul>
+                <p className="md:text-md xl:text-xl">
+                    Imagine unlocking this untapped potential, equitably.
+                </p>
                 <Link href='/about'
                     className="flex items-center gap-2 shadow-xl w-fit bg-[var(--light-Orange)] text-[var(--brown)] font-semibold rounded-md px-6 py-3 hover:-translate-y-1 transition-all duration-200"
                 >Know more</Link>

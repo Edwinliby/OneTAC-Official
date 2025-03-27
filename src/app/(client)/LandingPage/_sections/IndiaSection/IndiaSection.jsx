@@ -44,9 +44,12 @@ export default function Home() {
                         whileInView={{ scaleX: 1 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
                         viewport={{ once: true }}
-                        className="absolute block top-7 md:top-10 left-0 bg-amber-200 w-1/2 md:w-1/4 h-6 rounded-lg -z-10"
+                        className="absolute block top-4 md:top-7 left-0 bg-amber-200 w-[60%] md:w-1/4 h-6 rounded-lg -z-10"
                     />
                 </h1>
+                <p className="md:text-md xl:text-xl">
+                    An intelligent, interconnected, and thriving tourism ecosystem where every unique TAC asset and experience in India is brought to the mainstream, and is digitally accessible by all.
+                </p>
             </motion.section>
 
             <motion.section
@@ -66,11 +69,11 @@ export default function Home() {
                             viewport={{ once: true }}
                             className="flex flex-col items-center text-center p-4 w-fit"
                         >
-                            <p className="relative font-medium md:text-lg text-[#333]">{item.label}</p>
                             <h2 className="font-argaka text-[8rem] md:text-[7rem] xl:text-[10rem] w-fit">
                                 {item.value}
                                 <span className="text-[var(--orange)]">{item.span}</span>
                             </h2>
+                            <p className="relative -top-4 font-medium md:text-lg text-[#333]">{item.label}</p>
                         </motion.div>
                     ))}
                 </div>

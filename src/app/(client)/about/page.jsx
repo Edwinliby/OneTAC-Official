@@ -1,6 +1,7 @@
 import Img from '../../../../public/assets/26.webp'
 import Head from "@/Components/Head/Head";
 import BentoSection from './Sections/BentoSection/BentoSection';
+import ActionSection from './Sections/ActionSection/ActionSection';
 import DownloadSection from './Sections/DownloadS/DownloadSection';
 
 export default function page() {
@@ -12,6 +13,7 @@ export default function page() {
                 subTitle={"Built on open protocols, powered by innovation, designed for scale."}
             />
             <BentoSection />
+            <ActionSection />
             <DownloadSection />
         </>
     )

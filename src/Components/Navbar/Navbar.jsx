@@ -17,7 +17,7 @@ const navLinks = [
 export default function Navbar() {
     const pathname = usePathname();
     const [isHidden, setIsHidden] = useState(false);
-    const [isOutsideHero, setIsOutsideHero] = useState(pathname === '/privacy-policy');
+    const [isOutsideHero, setIsOutsideHero] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleNavbar = () => {
@@ -25,8 +25,11 @@ export default function Navbar() {
     };
 
     useEffect(() => {
-        // If on privacy-policy page, set isOutsideHero to true
-        if (pathname === '/privacy-policy') {
+        setIsOutsideHero(pathname === "/privacy-policy");
+    }, [pathname]);
+
+    useEffect(() => {
+        if (pathname === "/privacy-policy") {
             setIsOutsideHero(true);
             return; 
         }

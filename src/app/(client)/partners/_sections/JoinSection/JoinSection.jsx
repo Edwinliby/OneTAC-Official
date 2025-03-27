@@ -4,20 +4,20 @@ import Link from "next/link"
 
 const data = [
     {
-        title: "Contribute Funds",
-        desc: "Support with donations for impact"
+        title: "Investors & Funders",
+        desc: "Help scale innovation and impact."
     },
     {
-        title: "Volunteer Your Skills",
-        desc: "Help with training, tech, storytelling, content"
+        title: "Startups & Tech Innovators",
+        desc: "Build, integrate, and expand reach."
     },
     {
-        title: "Subscribe to OneTAC fund",
-        desc: "Get access to TAC startups and innovators"
+        title: "Governments & Public Sector",
+        desc: "Digitize, connect, and enhance access."
     },
     {
-        title: "Institutional Support & Research Grants",
-        desc: "For Up-skilling and fellowships programs"
+        title: "Artists & Cultural Organizations",
+        desc: "Share stories, grow audiences, thrive."
     },
 ]
 
