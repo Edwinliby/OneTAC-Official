@@ -75,10 +75,10 @@ export default function AboutSection() {
                 <ul className="flex flex-col gap-6">
                     {
                         list.map((item, index) => (
-                            <li className="flex items-start md:items-center gap-2 text-sm" key={index}>
-                                <Sparkle size={15} className="bg-[var(--orange)] text-white w-6 h-6 p-1 rounded-4xl" />
+                            <li className="group flex items-start md:items-center gap-2 text-sm" key={index}>
+                                <Sparkle size={15} className="bg-[var(--orange)] text-white w-6 h-6 p-1 rounded-4xl group-hover:rotate-180 transform duration-300" />
                                 {item.text}
-                                <Link href={item.link} rel="noopener noreferrer" target="_blank" className="hover:text-[var(--orange)]"> <Link2 size={18} className="-rotate-45" /></Link>
+                                <Link href={item.link} rel="noopener noreferrer" target="_blank" className="group-hover:text-[var(--orange)]"> <Link2 size={18} className="-rotate-45" /></Link>
                             </li>
                         ))
                     }

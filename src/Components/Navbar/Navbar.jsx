@@ -31,7 +31,7 @@ export default function Navbar() {
     useEffect(() => {
         if (pathname === "/privacy-policy") {
             setIsOutsideHero(true);
-            return; 
+            return;
         }
 
         let lastScrollY = window.scrollY;
@@ -52,7 +52,7 @@ export default function Navbar() {
     }, [pathname]);
 
     return (
-        <nav className={`fixed w-full px-4 md:px-8 lg:px-16 py-4 z-50 transition-all duration-300 flex items-center justify-between
+        <nav className={`fixed top-0 left-0 w-full px-4 md:px-8 lg:px-16 py-4 z-50 transition-all duration-300 flex items-center justify-between
         ${isOutsideHero ? 'bg-white shadow-xl shadow-[rgba(0,0,0,0.025)]' : 'bg-gradient-to-b from-[rgba(255,255,255,0.2)] to-transparent'} 
         ${isHidden && !isOpen ? '-translate-y-full' : 'translate-y-0'}`}>
             <Link href="/">

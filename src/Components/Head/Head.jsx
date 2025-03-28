@@ -10,7 +10,7 @@ export default function Head({ img, title, subTitle }) {
                 draggable={false}
                 width={800}
                 height={800}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-bottom"
             />
             <div className="absolute z-20 md:w-3/4 text-white bottom-0 left-0 right-0 flex flex-col gap-4 p-4 md:p-8 lg:p-16">
                 <b className="text-3xl md:text-4xl xl:text-5xl 2xl:w-3/4">

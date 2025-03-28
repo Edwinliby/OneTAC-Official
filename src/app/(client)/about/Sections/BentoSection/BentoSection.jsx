@@ -7,6 +7,7 @@ import two from "@/../public/assets/bento/2.webp";
 import three from "@/../public/assets/bento/3.webp";
 import four from "@/../public/assets/bento/4.webp";
 import five from "@/../public/assets/bento/5.webp";
+import six from "@/../public/assets/bento/6.webp";
 
 const containerVariants = {
     hidden: { opacity: 1 },
@@ -56,7 +57,7 @@ export default function BentoSection() {
                         />
                     </motion.div>
 
-                    <motion.div className="w-full h-full flex flex-col gap-4 bg-white rounded-2xl shadow-md p-8 py-10" variants={itemVariants}>
+                    <motion.div className="w-full h-full flex flex-col justify-between gap-4 bg-white rounded-2xl shadow-md p-8 py-10" variants={itemVariants}>
                         <p className="text-4xl">Enabling <b className="text-[var(--brown)]">Livelihoods</b></p>
                         <p className="text-xl xl:text-2xl">Turning every corner of India into a global destination by 2047.</p>
                         <Image
@@ -93,50 +94,61 @@ export default function BentoSection() {
 
                 {/* Right Grid */}
                 <motion.div className="col-span-1 row-span-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <motion.div className="w-full h-full relative overflow-hidden shadow-md bg-white rounded-2xl" variants={itemVariants}>
+                    <div className="col-span-1 row-span-2 grid grid-cols-1 gap-4">
+                        <motion.div className="w-full h-full row-span-2 flex flex-col justify-between gap-4 overflow-hidden bg-white rounded-2xl shadow-md px-8 pt-10" variants={itemVariants}>
+                            <div>
+                                <p className="text-4xl mb-6">For <b className="text-[var(--brown)]">Startups</b></p>
+                                <p className="text-xl xl:text-2xl">A ready-made grid to build on, not from scratch</p>
+                            </div>
+                            <Image
+                                src={four}
+                                alt="bento images"
+                                draggable={false}
+                                width={600}
+                                height={600}
+                                className="w-full h-fit object-contain"
+                            />
+                        </motion.div>
+                        <motion.div className="w-full h-full relative overflow-hidden shadow-md bg-white rounded-2xl" variants={itemVariants}>
+                            <Image
+                                src={three}
+                                alt="bento images"
+                                draggable={false}
+                                width={600}
+                                height={600}
+                                className="w-fit h-full object-cover"
+                            />
+                        </motion.div>
+                    </div>
+
+                    <div className="col-span-1 row-span-2 grid grid-cols-1 gap-4">
+                        <motion.div className="w-full h-full overflow-hidden flex items-center justify-center shadow-md bg-white rounded-2xl" variants={itemVariants}>
+                            <Image
+                                src={five}
+                                alt="bento images"
+                                draggable={false}
+                                width={600}
+                                height={600}
+                                className="w-full h-full object-cover"
+                            />
+                        </motion.div>
+
+                        <motion.div className="w-full h-full flex flex-col items-start justify-between bg-white rounded-2xl shadow-md p-8 py-14" variants={itemVariants}>
+                            <h3 className="text-3xl">Tap into India's tourism growth story and unlock <b className="text-[var(--brown)]">new business models</b></h3>
+                            <p className="text-4xl">For <b className="text-[var(--brown)]">Investors</b></p>
+                        </motion.div>
+                    </div>
+
+                    <motion.div className="w-full h-full relative sm:col-span-2 overflow-hidden shadow-md bg-white rounded-2xl" variants={itemVariants}>
+                        <p className="absolute font-bold text-2xl p-8 py-10">India's tourism <b className="text-[var(--brown)]">growth story</b></p>
                         <Image
-                            src={three}
+                            src={six}
                             alt="bento images"
                             draggable={false}
                             width={600}
                             height={600}
-                            className="w-3/4 sm:w-fit h-fit sm:h-full object-contain sm:object-cover mx-auto relative sm:absolute -bottom-16 sm:bottom-0 left-0 right-0"
+                            className="w-full h-fit object-cover relative -bottom-16 sm:bottom-0"
                         />
-                    </motion.div>
-
-                    <motion.div className="w-full h-full flex items-center justify-center shadow-md bg-white rounded-2xl" variants={itemVariants}>
-                        <Image
-                            src={five}
-                            alt="bento images"
-                            draggable={false}
-                            width={600}
-                            height={600}
-                            className="w-3/4 sm:w-fit h-fit object-cover"
-                        />
-                    </motion.div>
-
-                    <motion.div className="w-full h-full flex flex-col justify-between gap-4 overflow-hidden bg-white rounded-2xl shadow-md px-8 pt-10" variants={itemVariants}>
-                        <div>
-                            <p className="text-4xl mb-6">For <b className="text-[var(--brown)]">Startups</b></p>
-                            <p className="text-xl xl:text-2xl">A ready-made grid to build on, not from scratch</p>
-                        </div>
-                        <Image
-                            src={four}
-                            alt="bento images"
-                            draggable={false}
-                            width={600}
-                            height={600}
-                            className="w-full h-fit object-contain"
-                        />
-                    </motion.div>
-
-                    <motion.div className="w-full h-full flex flex-col items-start justify-between bg-white rounded-2xl shadow-md p-8 py-14" variants={itemVariants}>
-                        <h3 className="text-3xl">Tap into India's tourism growth story and unlock <b className="text-[var(--brown)]">new business models</b></h3>
-                        <p className="text-4xl">For <b className="text-[var(--brown)]">Investors</b></p>
-                    </motion.div>
-
-                    <motion.div className="w-full h-[10rem] sm:col-span-2 shadow-md bg-white rounded-2xl" variants={itemVariants}>
-                        <p className="text-4xl font-telma">In progress</p>
                     </motion.div>
                 </motion.div>
             </motion.div>
