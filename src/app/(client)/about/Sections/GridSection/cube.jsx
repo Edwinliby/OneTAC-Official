@@ -1,6 +1,6 @@
 function Cube({ Color }) {
     return (
-        <div className="hover:-translate-y-2 transition duration-300">
+        <div className="group cursor-pointer active:-translate-y-3 hover:-translate-y-2 transition duration-300">
             <div className="w-8 h-8 perspective-[500px]">
                 <div className="w-full h-full relative transform-style-preserve-3d">
 
@@ -25,10 +25,10 @@ function Cube({ Color }) {
 
 export default function Cubes({ Color }) {
     return (
-        <div className='flex h-[5rem'>
+        <div className='flex'>
             <Cube Color={Color} />
             <Cube Color={Color} />
             <Cube Color={Color} />
         </div>
-    )
+    );
 }

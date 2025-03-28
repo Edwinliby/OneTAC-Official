@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Volume2, VolumeOff } from "lucide-react";
 
-const HeroBg = "https://beckn-ui-application.s3.ap-south-1.amazonaws.com/OneTac/Video+bg+for+website.mp4";
+// const HeroBg = "https://beckn-ui-application.s3.ap-south-1.amazonaws.com/OneTac/Video+bg+for+website.mp4";
 
 export default function HeroSection() {
     const [isMuted, setIsMuted] = useState(true);
@@ -34,8 +34,8 @@ export default function HeroSection() {
                 ></motion.div>
                 <div className="w-full h-full">
                     <video
-                        // src='/videoBg.webm'
-                        src={HeroBg}
+                        src='/videoBg.webm'
+                        // src={HeroBg}
                         autoPlay
                         muted
                         loop

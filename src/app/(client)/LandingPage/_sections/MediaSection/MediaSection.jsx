@@ -12,7 +12,7 @@ import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 
 export default function App() {
     return (
-        <div className='px-4 py-10 lg:py-24 md:p-8 lg:p-16 relative'>
+        <div id="news" className='px-4 py-10 lg:py-24 md:p-8 lg:p-16 relative'>
             <div className='flex items-center gap-4 mb-12 md:mb-16'>
                 <span className='flex-1 h-0.5 bg-gray-400 rounded'></span>
                 <h1 className='whitespace-nowrap text-[var(--brown)] text-2xl md:text-4xl font-bold px-4'>News & Media</h1>

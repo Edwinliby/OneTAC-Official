@@ -38,7 +38,7 @@ export default function Home() {
                 className="px-4 md:px-8 lg:px-16 text-left"
             >
                 <h1 className="relative text-[2rem] md:text-4xl lg:text-5xl font-medium leading-tight mb-4 text-[var(--brown)]">
-                    India's stories deserve a stage.{isWideScreen && <br />} Together we can
+                    India's stories deserve a stage.{isWideScreen && <br />} OneTAC envisions:
                     <motion.span
                         initial={{ scaleX: 0 }}
                         whileInView={{ scaleX: 1 }}

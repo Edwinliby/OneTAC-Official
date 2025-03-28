@@ -6,6 +6,7 @@ import ColorLogo from '@/../public/assets/logo_color.webp';
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ArrowRight } from 'lucide-react'
 
 const navLinks = [
     { name: "About", link: "/about" },
@@ -14,11 +15,31 @@ const navLinks = [
     { name: "Engage with us", link: "/contact" },
 ];
 
+const menuLinks = [
+    { name: "Home", link: "/" },
+    { name: "About OneTAC", link: "/about#aboutOneTAC" },
+    { name: "The OneTAC Movement Begins", link: "/partners#movementBegins" },
+    { name: "OneTAC Collaborative", link: "/partners#collaborative" },
+    { name: "Impact & Experience", link: "/impact" },
+    { name: "The Market Opportunity", link: "/about#opportunity" },
+    { name: "News & Stories", link: "/#news" },
+    { name: "OneTAC Brochure", link: "https://onetac.org/wp-content/uploads/2024/11/OneTAC-Concept-Note-Opt.pdf" },
+    { name: "Engage with us", link: "/contact" },
+];
+
+const socialLinks = [
+    { name: "Instagram", link: "https://www.instagram.com/" },
+    { name: "Linkedin", link: "https://www.linkedin.com/" },
+    { name: "YouTube", link: "https://www.youtube.com/" },
+    { name: "Twitter", link: "https://twitter.com/" },
+]
+
 export default function Navbar() {
     const pathname = usePathname();
     const [isHidden, setIsHidden] = useState(false);
     const [isOutsideHero, setIsOutsideHero] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [currentHash, setCurrentHash] = useState("");
 
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
@@ -26,6 +47,11 @@ export default function Navbar() {
 
     useEffect(() => {
         setIsOutsideHero(pathname === "/privacy-policy");
+
+        const updateHash = () => setCurrentHash(window.location.hash);
+        window.addEventListener("hashchange", updateHash);
+        updateHash();
+        return () => window.removeEventListener("hashchange", updateHash);
     }, [pathname]);
 
     useEffect(() => {
@@ -92,7 +118,7 @@ export default function Navbar() {
                     <button
                         onClick={toggleNavbar}
                         className={`
-                            ${"flex flex-col w-12 h-12 items-center justify-center space-y-1.5 group focus:outline-none relative z-50"}
+                            ${"flex flex-col cursor-pointer w-12 h-12 items-center justify-center space-y-1.5 group focus:outline-none relative z-50"}
                             ${isOpen ? "md:translate-x-8 rounded-4xl shadow" : ""}
                             `}
                     >
@@ -115,20 +141,36 @@ export default function Navbar() {
                 </div>
 
                 <div
-                    className={`fixed top-0 right-0 h-screen w-full md:w-[35%] bg-white shadow-lg transform transition-transform duration-300 ease-in-out 
+                    className={`fixed top-0 right-0 h-screen w-full md:w-[35%] flex flex-col justify-center pl-2 md:pl-6 bg-white shadow-lg transform transition-transform duration-300 ease-in-out 
                     ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-40`}
                 >
-                    <div className="flex flex-col gap-4 p-4">
-                        {navLinks.map((item) => (
-                            <Link
-                                href={item.link}
-                                key={item.name}
-                                onClick={() => setIsOpen(false)}
-                                className={`text-black w-fit font-medium hover:text-[var(--orange)]`}
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                    <div className="flex flex-col gap-6 p-4">
+                        {menuLinks.map((item) => {
+                            const isActive = (pathname + currentHash) === item.link;
+                            return (
+                                <Link
+                                    href={item.link}
+                                    key={item.name}
+                                    onClick={toggleNavbar}
+                                    className={`text-black flex items-center gap-1 font-medium hover:text-[var(--brown)] text-xl ${isActive ? "text-[var(--brown)]" : ""}`}
+                                >
+                                    {isActive && <ArrowRight />} {item.name}
+                                </Link>
+                            );
+                        })}
+                    </div>
+                    <div className="flex items-center flex-wrap gap-4 md:gap-6 absolute bottom-6 left-6">
+                        {
+                            socialLinks.map((item) => (
+                                <Link
+                                    href={item.link}
+                                    key={item.name}
+                                    className={`text-black w-fit font-medium hover:text-[var(--brown)]`}
+                                >
+                                    {item.name}
+                                </Link>
+                            ))
+                        }
                     </div>
                 </div>
 

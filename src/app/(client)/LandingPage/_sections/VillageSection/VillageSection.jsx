@@ -55,12 +55,16 @@ export default function VillageSection() {
                     viewport={{ once: true }}
                     className="text-[var(--brown)] text-[2rem] md:text-4xl lg:text-5xl font-medium"
                 >
-                    Every village has a story. {isWideScreen && <br />}
-                    {" "}OneTAC helps the world hear it.
+                    Every part of India is a story{isWideScreen && <br />} {" "} to tell + more modern experiences
                 </motion.h1>
-                <p className="md:text-md xl:text-xl mt-4">
+                <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                    className="md:text-md xl:text-xl mt-4"
+                >
                     Despite its vast potential, the TAC ecosystem remains fragmented, with unequal growth and limited discoverability for small-scale operators. A decentralized, community-driven approach can bridge these gaps and drive sustainable, inclusive growth.
-                </p>
+                </motion.p>
             </div>
 
             {/* Scrollable Cards */}

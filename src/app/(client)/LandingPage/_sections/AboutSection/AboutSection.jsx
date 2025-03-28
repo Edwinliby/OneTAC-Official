@@ -61,7 +61,7 @@ export default function AboutSection() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.5 }}
             >
-                <p className="relative w-fit font-medium text-xl">
+                <p className="relative w-fit font-medium  lg:text-xl">
                     About Us
                     <span className="absolute left-1 -bottom-[.005rem] rounded-2xl w-full h-2 -z-10 bg-amber-200"></span>
                 </p>
@@ -75,10 +75,10 @@ export default function AboutSection() {
                 <ul className="flex flex-col gap-6">
                     {
                         list.map((item, index) => (
-                            <li className="group flex items-start md:items-center gap-2 text-sm" key={index}>
-                                <Sparkle size={15} className="bg-[var(--orange)] text-white w-6 h-6 p-1 rounded-4xl group-hover:rotate-180 transform duration-300" />
+                            <li className="group flex items-start md:items-center gap-2 md:text-md" key={index}>
+                                <Sparkle size={15} className="bg-[var(--orange)] text-white w-6 h-6 p-1 rounded-4xl group-active:rotate-180 group-hover:rotate-180 transform duration-300" />
                                 {item.text}
-                                <Link href={item.link} rel="noopener noreferrer" target="_blank" className="group-hover:text-[var(--orange)]"> <Link2 size={18} className="-rotate-45" /></Link>
+                                {/* <Link href={item.link} rel="noopener noreferrer" target="_blank" className="group-hover:text-[var(--orange)]"> <Link2 size={18} className="-rotate-45" /></Link> */}
                             </li>
                         ))
                     }

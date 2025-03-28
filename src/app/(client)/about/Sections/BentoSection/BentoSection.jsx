@@ -26,7 +26,7 @@ const itemVariants = {
 
 export default function BentoSection() {
     return (
-        <div className="px-4 py-10 md:p-8 lg:p-16 flex flex-col gap-8 lg:gap-16">
+        <div id="opportunity" className="px-4 py-10 md:p-8 lg:p-16 flex flex-col gap-8 lg:gap-16">
             <h1 className="text-[2rem] md:text-4xl lg:text-5xl font-semibold text-[var(--brown)]">
                 The Market Opportunity
             </h1>

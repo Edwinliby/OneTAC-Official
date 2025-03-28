@@ -7,8 +7,9 @@ import p4 from '../../../../../../public/partners/p4.webp';
 import p5 from '../../../../../../public/partners/p5.webp';
 import p6 from '../../../../../../public/partners/p6.webp';
 import p7 from '../../../../../../public/partners/p7.webp';
+import p8 from '../../../../../../public/partners/fp2.webp';
 
-const partnersList = [p1, p2, p3, p4, p5, p6, p7];
+const partnersList = [p1, p2, p3, p4, p5, p6, p7,p8];
 
 export default function PartnerSection() {
     return (
