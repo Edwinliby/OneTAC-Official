@@ -41,7 +41,7 @@ export default function GridSection() {
 
                 <div className="w-full">
                     <div className="flex w-full items-start md:items-center md:justify-center lg:justify-between flex-wrap gap-6 md:gap-4 bg-white border border-[var(--brown)]/20 rounded-2xl p-6 md:bg-transparent md:rounded-none md:p-0 md:border-none">
-                        <p className="group flex items-center gap-2 font-semibold md:text-xl xl:text-2xl">
+                        <p className="group flex items-center gap-2 font-semibold lg:font-bold md:text-xl xl:text-2xl">
                             <Sparkle size={15} className="block md:hidden bg-[var(--orange)] text-white w-6 h-6 p-1 rounded-4xl group-hover:rotate-180 transform duration-300" />
                             Discoverability & access
                         </p>
@@ -50,7 +50,7 @@ export default function GridSection() {
                             <span className="w-[2px] h-16 border-l-3 border-dashed border-[var(--brown)]"></span>
                             <div className="absolute left-1/2 -bottom-2 -translate-x-1/2 w-2 h-2 bg-[var(--brown)] rounded-full"></div>
                         </div>
-                        <p className="group flex items-center gap-2 font-semibold md:text-xl xl:text-2xl">
+                        <p className="group flex items-center gap-2 font-semibold lg:font-bold md:text-xl xl:text-2xl">
                             <Sparkle size={15} className="block md:hidden bg-[var(--orange)] text-white w-6 h-6 p-1 rounded-4xl group-hover:rotate-180 transform duration-300" />
                             Trust
                         </p>
@@ -59,7 +59,7 @@ export default function GridSection() {
                             <span className="w-[2px] h-16 border-l-3 border-dashed border-[var(--brown)]"></span>
                             <div className="absolute left-1/2 -bottom-2 -translate-x-1/2 w-2 h-2 bg-[var(--brown)] rounded-full"></div>
                         </div>
-                        <p className="group flex items-center gap-2 font-semibold md:text-xl xl:text-2xl">
+                        <p className="group flex items-center gap-2 font-semibold lg:font-bold md:text-xl xl:text-2xl">
                             <Sparkle size={15} className="block md:hidden bg-[var(--orange)] text-white w-6 h-6 p-1 rounded-4xl group-hover:rotate-180 transform duration-300" />
                             Data ownership
                         </p>
@@ -68,7 +68,7 @@ export default function GridSection() {
                             <span className="w-[2px] h-16 border-l-3 border-dashed border-[var(--brown)]"></span>
                             <div className="absolute left-1/2 -bottom-2 -translate-x-1/2 w-2 h-2 bg-[var(--brown)] rounded-full"></div>
                         </div>
-                        <p className="group flex items-center gap-2 font-semibold md:text-xl xl:text-2xl">
+                        <p className="group flex items-center gap-2 font-semibold lg:font-bold md:text-xl xl:text-2xl">
                             <Sparkle size={15} className="block md:hidden bg-[var(--orange)] text-white w-6 h-6 p-1 rounded-4xl group-hover:rotate-180 transform duration-300" />
                             Context & Personalisation
                         </p>
@@ -101,13 +101,13 @@ export default function GridSection() {
             </div>
 
             {/* Bottom Grid Section */}
-            <div className="flex flex-col md:flex-row items-center justify-between mt-8 md:mt-12 gap-8">
+            <div className="flex flex-col md:flex-row items-center justify-between mt-8 md:mt-12 gap-8 2xl:gap-14">
                 <div className="flex flex-col items-start gap-4 w-full xl:w-[60%]">
                     {
                         gridLayer.map(item => (
-                            <div key={item.layer} className="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-4 py-4">
-                                <b className="font-bold text-2xl">{item.layer}</b>
-                                <div className="w-full sm:w-[25rem] lg:w-[30rem] xl:w-[25rem] flex items-center gap-8">
+                            <div key={item.layer} className="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-8 py-4 md:py-2 2xl:py-4">
+                                <b className="font-bold text-2xl 2xl:text-3xl w-1/2 whitespace-nowrap">{item.layer}</b>
+                                <div className="w-full md:w-1/2 flex items-center gap-8 2xl:gap-14">
                                     <Cubes Color={item.color} />
                                     <p className="text-sm md:text-base">{item.text}</p>
                                 </div>

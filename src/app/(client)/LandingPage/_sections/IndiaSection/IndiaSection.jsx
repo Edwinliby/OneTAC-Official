@@ -29,7 +29,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="flex flex-col gap-8 md:gap-10 py-10 lg:py-24">
+        <div className="flex flex-col gap-8 md:gap-10 md:py-10 lg:py-24">
             <motion.section
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -37,17 +37,17 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="px-4 md:px-8 lg:px-16 text-left"
             >
-                <h1 className="relative text-[2rem] md:text-4xl lg:text-5xl font-medium leading-tight mb-4 text-[var(--brown)]">
+                <h1 className="relative text-[2rem] md:text-4xl lg:text-5xl font-medium xl:leading-16 mb-4 text-[var(--brown)]">
                     India's stories deserve a stage.{isWideScreen && <br />} OneTAC envisions:
                     <motion.span
                         initial={{ scaleX: 0 }}
                         whileInView={{ scaleX: 1 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
                         viewport={{ once: true }}
-                        className="absolute block top-4 md:top-7 left-0 bg-amber-200 w-[60%] md:w-1/4 h-6 rounded-lg -z-10"
+                        className="absolute block top-5 md:top-8 left-0 bg-amber-200 w-[65%] xl:w-[60%] md:w-1/4 h-6 rounded-lg -z-10"
                     />
                 </h1>
-                <p className="md:text-md xl:text-xl">
+                <p className="md:text-md xl:text-xl xl:w-[55%]">
                     An intelligent, interconnected, and thriving tourism ecosystem where every unique TAC asset and experience in India is brought to the mainstream, and is digitally accessible by all.
                 </p>
             </motion.section>

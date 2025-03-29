@@ -78,7 +78,7 @@ export default function Navbar() {
     }, [pathname]);
 
     return (
-        <nav className={`fixed top-0 left-0 w-full px-4 md:px-8 lg:px-16 py-4 z-50 transition-all duration-300 flex items-center justify-between
+        <nav className={`fixed top-0 left-0 w-full px-4 md:px-6 lg:px-8 xl:px-16 py-4 z-50 transition-all duration-300 flex items-center justify-between
         ${isOutsideHero ? 'bg-white shadow-xl shadow-[rgba(0,0,0,0.025)]' : 'bg-gradient-to-b from-[rgba(255,255,255,0.2)] to-transparent'} 
         ${isHidden && !isOpen ? '-translate-y-full' : 'translate-y-0'}`}>
             <Link href="/">
@@ -100,19 +100,31 @@ export default function Navbar() {
                 />
             </Link>
 
-            <div className="flex items-center gap-6">
-                <div className="hidden md:flex items-center gap-6">
-                    {navLinks.map((item) => (
-                        <Link
-                            href={item.link}
-                            key={item.name}
-                            className={`font-medium hover:text-[var(--orange)]
+            <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-6">
+                {navLinks.slice(0, 3).map((item) => (
+                    <Link
+                        href={item.link}
+                        key={item.name}
+                        className={`font-medium hover:text-[var(--orange)]
                                 ${isOutsideHero ? "text-black" : "text-white"}`}
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
-                </div>
+                    >
+                        {item.name}
+                    </Link>
+                ))}
+            </div>
+
+            <div className="flex items-center gap-4">
+                <Link
+                    href={navLinks[3].link}
+                    className={`
+                        w-fit z-10 bg-[var(--light-Orange)] border border-white text-xs lg:text-base text-[var(--brown)]
+                        font-semibold py-1 xl:py-2 px-6 xl:px-8 rounded-lg cursor-pointer transition duration-300 shadow-lg
+                        hover:-translate-y-2 hover:border-[var(--light-Orange)] hover:shadow-2xl hover:bg-amber-200
+                        hidden lg:block
+                    `}
+                >
+                    {navLinks[3].name}
+                </Link>
 
                 <div className="flex items-center justify-start relative z-50">
                     <button
@@ -141,7 +153,7 @@ export default function Navbar() {
                 </div>
 
                 <div
-                    className={`fixed top-0 right-0 h-screen w-full md:w-[35%] flex flex-col justify-center pl-2 md:pl-6 bg-white shadow-lg transform transition-transform duration-300 ease-in-out 
+                    className={`fixed top-0 right-0 h-screen w-full md:w-[50%] lg:w-[35%] flex flex-col justify-center pl-2 md:pl-6 bg-white shadow-lg transform transition-transform duration-300 ease-in-out 
                     ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-40`}
                 >
                     <div className="flex flex-col gap-6 p-4">

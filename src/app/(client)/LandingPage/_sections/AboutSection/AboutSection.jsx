@@ -2,20 +2,14 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Sparkle, Link2 } from "lucide-react"
+import { Sparkle } from "lucide-react"
 import { motion } from "framer-motion";
 import Img1 from '../../../../../../public/assets/1.webp'
 import Img2 from '../../../../../../public/assets/16.webp'
 
 const list = [
-    {
-        text: "Tourism supports 70 million jobs, yet only drives 1.77% of India's GDP",
-        link: "https://wttc.org/research/economic-impact",
-    },
-    {
-        text: "India has 10 million artisans, yet only 2% are digitally visible",
-        link: "https://texmin.nic.in/sites/default/files/English%20Final%20MOT%20Annual%20Report%202022-23%20%28English%29_0.pdf",
-    },
+    "Tourism supports 70 million jobs, yet only drives 1.77% of India's GDP",
+    "India has 10 million artisans, yet only 2% are digitally visible",
 ]
 
 export default function AboutSection() {
@@ -62,12 +56,11 @@ export default function AboutSection() {
                 viewport={{ once: true, amount: 0.5 }}
             >
                 <p className="relative w-fit font-medium  lg:text-xl">
-                    About Us
+                    What is OneTAC
                     <span className="absolute left-1 -bottom-[.005rem] rounded-2xl w-full h-2 -z-10 bg-amber-200"></span>
                 </p>
                 <h2 className="text-[2rem] md:text-4xl lg:text-5xl text-[var(--brown)] font-medium xl:leading-14">
-                    OneTAC - India's <br />
-                    UPI Moment for Tourism
+                    India's Tourism Tipping Point
                 </h2>
                 <p className="md:text-md xl:text-xl">
                     OneTAC is a pan-India digital grid that seamlessly connects tourism, arts, and culture (TAC) —unlocking a UPI-like transformation for India's services economy, turning tourism into India's next economic revolution, empowering travelers to discover hidden gems.
@@ -77,8 +70,7 @@ export default function AboutSection() {
                         list.map((item, index) => (
                             <li className="group flex items-start md:items-center gap-2 md:text-md" key={index}>
                                 <Sparkle size={15} className="bg-[var(--orange)] text-white w-6 h-6 p-1 rounded-4xl group-active:rotate-180 group-hover:rotate-180 transform duration-300" />
-                                {item.text}
-                                {/* <Link href={item.link} rel="noopener noreferrer" target="_blank" className="group-hover:text-[var(--orange)]"> <Link2 size={18} className="-rotate-45" /></Link> */}
+                                {item}
                             </li>
                         ))
                     }

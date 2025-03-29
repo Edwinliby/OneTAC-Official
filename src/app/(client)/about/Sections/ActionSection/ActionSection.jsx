@@ -7,7 +7,7 @@ export default function ActionSection() {
             <RandomBlock />
             <div className="absolute flex flex-col items-center gap-8 p-4 z-20">
                 <h1 className="text-center text-5xl md:text-7xl text-white font-semibold">Join the Movement</h1>
-                <div className="flex flex-col md:flex-row items-center gap-4">
+                <div className="flex flex-col items-center gap-4">
                     <div
                         className={`
                         w-fit z-10 bg-[var(--light-Orange)] border border-white text-[var(--brown)]

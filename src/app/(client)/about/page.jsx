@@ -4,7 +4,7 @@ import WhatSection from './Sections/WhatSection/WhatSection';
 import GridSection from './Sections/GridSection/GridSection';
 import BentoSection from './Sections/BentoSection/BentoSection';
 import ActionSection from './Sections/ActionSection/ActionSection';
-import DownloadSection from './Sections/DownloadS/DownloadSection';
+import DownloadSection from './Sections/DownloadSection/DownloadSection';
 
 export default function page() {
     return (

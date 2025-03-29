@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Head({ img, title, subTitle }) {
     return (
-        <div className="relative h-[27rem] lg:h-[30rem]" id="hero">
+        <div className="relative h-[27rem] lg:h-[calc(100vh-200px)]" id="hero">
             <div className="absolute bottom-0 left-0 w-full h-full md:h-1/2 z-10 bg-gradient-to-t from-black/50"></div>
             <Image
                 src={img}

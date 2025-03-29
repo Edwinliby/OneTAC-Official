@@ -45,15 +45,15 @@ export default function HeroSection() {
                 </div>
 
                 <motion.div
-                    className="flex flex-col items-center gap-7 px-4 w-full absolute top-[35%] left-[50%] translate-x-[-50%] text-center"
+                    className="flex flex-col items-center gap-6 md:gap-8 px-2 w-full absolute top-[32%] left-[50%] translate-x-[-50%] text-center"
                     style={{ opacity, translateY }}
                 >
                     <p className="italic font-bold px-8 text-xs md:text-sm">
-                        “Discover more. Connect more. Experience more—with OneTAC”
+                        Discover more. Connect more. Experience more—with OneTAC
                     </p>
-                    <h1 className="w-full md:w-[90%] text-center lg:w-3/4 2xl:w-1/2 font-telma text-4xl md:text-6xl xl:text-7xl sm:whitespace-nowrap">
+                    <h1 className="w-full text-center font-telma text-4xl md:text-6xl xl:text-8xl leading-12 md:leading-18 xl:leading-28 sm:whitespace-nowrap">
                         Unlock India's soul <br />
-                        <span className="relative sm:-left-6">One experience at a time</span>
+                        One experience at a time
                     </h1>
                 </motion.div>
 

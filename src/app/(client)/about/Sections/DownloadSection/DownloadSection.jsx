@@ -16,20 +16,20 @@ export default function DownloadSection() {
                         width={100}
                         height={100}
                     />
-                    <h2 className='font-semibold text-2xl md:text-2xl lg:text-4xl xl:text-5xl'>
+                    <h2 className='font-semibold text-2xl md:text-2xl lg:text-4xl xl:text-5xl md:leading-10 xl:leading-16'>
                         Want to know more? Dive <br />
                         deeper into <span className='text-[var(--orange)]'>OneTAC</span>
                     </h2>
                     <Link href={brochureUrl} rel='noopener noreferrer' className='font-semibold border-2 border-[var(--brown)]/40 px-6 py-2 w-fit rounded-full text-[var(--brown)] transition duration-300 hover:shadow-lg'>Download Now</Link>
                 </div>
-                <div className='sm:w-3/4 flex justify-center'>
+                <div className='sm:w-3/4 flex justify-center group'>
                     <Link href={brochureUrl} rel='noopener noreferrer' className='p-4 sm:p-0'>
                         <Image
                             src={Brochure}
                             alt="Brochure Image"
                             width={400}
                             height={400}
-                            className='sm:w-fit sm:h-[18rem] hover:-rotate-6 transition duration-300'
+                            className='sm:w-fit sm:h-[18rem] group-active:-rotate-6 hover:-rotate-6 transition duration-300'
                         />
                     </Link>
                 </div>

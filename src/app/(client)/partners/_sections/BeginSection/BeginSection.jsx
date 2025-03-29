@@ -13,7 +13,7 @@ export default function BeginSection() {
                     Watch our launch at Bengaluru Tech Summit 2024 discussing why tourism needs a radical transformation—and how OneTAC is leading the charge.                </p>
             </div>
             <motion.div
-                className="w-full h-[18rem] sm:h-[20rem] xl:h-[30rem] overflow-hidden rounded-xl shadow-lg"
+                className="w-full h-[18rem] sm:h-[20rem] xl:h-[30rem] 2xl:h-[38rem] overflow-hidden rounded-2xl shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

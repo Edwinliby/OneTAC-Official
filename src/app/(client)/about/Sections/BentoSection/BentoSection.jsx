@@ -45,7 +45,7 @@ export default function BentoSection() {
                         <p className="text-xl xl:text-2xl">But it's fragmented and inequitable.</p>
                     </motion.div>
 
-                    <motion.div className="w-full h-full flex flex-col justify-between bg-white rounded-2xl shadow-md" variants={itemVariants}>
+                    <motion.div className="group overflow-hidden w-full h-full flex flex-col justify-between bg-white rounded-2xl shadow-md" variants={itemVariants}>
                         <p className="font-bold text-2xl p-8 py-10">Market size and <b className="text-[var(--brown)]">projections</b></p>
                         <Image
                             src={two}
@@ -53,11 +53,11 @@ export default function BentoSection() {
                             draggable={false}
                             width={600}
                             height={600}
-                            className="w-full h-fit object-contain px-6"
+                            className="w-full h-fit object-contain px-6 group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                         />
                     </motion.div>
 
-                    <motion.div className="w-full h-full flex flex-col justify-between gap-4 bg-white rounded-2xl shadow-md p-8 py-10" variants={itemVariants}>
+                    <motion.div className="overflow-hidden group w-full h-full flex flex-col justify-between gap-4 bg-white rounded-2xl shadow-md p-8 py-10" variants={itemVariants}>
                         <p className="text-4xl">Enabling <b className="text-[var(--brown)]">Livelihoods</b></p>
                         <p className="text-xl xl:text-2xl">Turning every corner of India into a global destination by 2047.</p>
                         <Image
@@ -66,28 +66,28 @@ export default function BentoSection() {
                             draggable={false}
                             width={600}
                             height={600}
-                            className="w-full h-fit object-contain relative -bottom-8 left-0"
+                            className="w-full h-fit object-contain relative -bottom-8 left-0 group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                         />
                     </motion.div>
 
                     <div className="w-full h-full text-center text-[var(--brown)] rounded-2xl grid grid-cols-2 gap-4">
-                        <motion.div className="w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
-                            <p className="font-semibold">OneTAC <br />Ambition</p>
+                        <motion.div className="group w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
+                            <p className="font-semibold group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out">OneTAC <br />Ambition</p>
                         </motion.div>
-                        <motion.div className="w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
-                            <p className="text-xs"><b className="text-4xl">$1 Tn+</b><br />Economy</p>
+                        <motion.div className="group w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
+                            <p className="text-xs group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out"><b className="text-4xl">$1 Tn+</b><br />Economy</p>
                         </motion.div>
-                        <motion.div className="w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
-                            <p className="text-xs"><b className="text-4xl">600 K</b><br />Villages</p>
+                        <motion.div className="group w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
+                            <p className="text-xs group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out"><b className="text-4xl">600 K</b><br />Villages</p>
                         </motion.div>
-                        <motion.div className="w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
-                            <p className="font-semibold">Untapped <br />Experiences </p>
+                        <motion.div className="group w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
+                            <p className="font-semibold group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out">Untapped <br />Experiences </p>
                         </motion.div>
-                        <motion.div className="w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
-                            <p className="font-semibold">Stories <br />Unlocked</p>
+                        <motion.div className="group w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
+                            <p className="font-semibold group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out">Stories <br />Unlocked</p>
                         </motion.div>
-                        <motion.div className="w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
-                            <p className="text-xs"><b className="text-4xl">35 Mn</b><br />New Jobs</p>
+                        <motion.div className="group w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
+                            <p className="text-xs group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out"><b className="text-4xl">35 Mn</b><br />New Jobs</p>
                         </motion.div>
                     </div>
                 </motion.div>
@@ -95,7 +95,7 @@ export default function BentoSection() {
                 {/* Right Grid */}
                 <motion.div className="col-span-1 row-span-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="col-span-1 row-span-2 grid grid-cols-1 gap-4">
-                        <motion.div className="w-full h-full row-span-2 flex flex-col justify-between gap-4 overflow-hidden bg-white rounded-2xl shadow-md px-8 pt-10" variants={itemVariants}>
+                        <motion.div className="group w-full h-full row-span-2 flex flex-col justify-between gap-4 overflow-hidden bg-white rounded-2xl shadow-md px-8 pt-10" variants={itemVariants}>
                             <div>
                                 <p className="text-4xl mb-6">For <b className="text-[var(--brown)]">Startups</b></p>
                                 <p className="text-xl xl:text-2xl">A ready-made grid to build on, not from scratch</p>
@@ -106,30 +106,30 @@ export default function BentoSection() {
                                 draggable={false}
                                 width={600}
                                 height={600}
-                                className="w-full h-fit object-contain"
+                                className="w-full h-fit object-contain group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                             />
                         </motion.div>
-                        <motion.div className="w-full h-full relative overflow-hidden shadow-md bg-white rounded-2xl" variants={itemVariants}>
+                        <motion.div className="group w-full h-full relative overflow-hidden shadow-md bg-white rounded-2xl" variants={itemVariants}>
                             <Image
                                 src={three}
                                 alt="bento images"
                                 draggable={false}
                                 width={600}
                                 height={600}
-                                className="w-fit h-full object-cover"
+                                className="w-fit h-full object-cover group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                             />
                         </motion.div>
                     </div>
 
                     <div className="col-span-1 row-span-2 grid grid-cols-1 gap-4">
-                        <motion.div className="w-full h-full overflow-hidden flex items-center justify-center shadow-md bg-white rounded-2xl" variants={itemVariants}>
+                        <motion.div className="group w-full h-full overflow-hidden flex items-center justify-center shadow-md bg-white rounded-2xl" variants={itemVariants}>
                             <Image
                                 src={five}
                                 alt="bento images"
                                 draggable={false}
                                 width={600}
                                 height={600}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                             />
                         </motion.div>
 
@@ -140,14 +140,14 @@ export default function BentoSection() {
                     </div>
 
                     <motion.div className="w-full h-full relative sm:col-span-2 overflow-hidden shadow-md bg-white rounded-2xl" variants={itemVariants}>
-                        <p className="absolute font-bold text-2xl p-8 py-10">India's tourism <b className="text-[var(--brown)]">growth story</b></p>
+                        <p className="group absolute font-bold text-2xl p-8 py-10">India's tourism <b className="text-[var(--brown)]">growth story</b></p>
                         <Image
                             src={six}
                             alt="bento images"
                             draggable={false}
                             width={600}
                             height={600}
-                            className="w-full h-fit object-cover relative -bottom-16 sm:bottom-0"
+                            className="w-full h-fit object-cover relative -bottom-16 sm:bottom-0 group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                         />
                     </motion.div>
                 </motion.div>
