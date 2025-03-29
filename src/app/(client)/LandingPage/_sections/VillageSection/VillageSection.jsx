@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cardData } from "./data";
+import DescriptionText from "@/Components/DescriptionText/DescriptionText";
 
 export default function VillageSection() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -53,18 +54,20 @@ export default function VillageSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="text-[var(--brown)] text-[2rem] md:text-4xl lg:text-5xl font-medium md:leading-12 lg:leading-16"
+                    className="text-[var(--brown)] text-[2rem] md:text-4xl lg:text-5xl 3xl:text-6xl font-semibold md:leading-12 lg:leading-16 3xl:leading-20"
                 >
                     Every part of India is a story{isWideScreen && <br />} {" "} to tell + more modern experiences
                 </motion.h1>
-                <motion.p
+                <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-                    className="md:text-md xl:text-xl mt-4 lg:w-3/4"
                 >
-                    Despite its vast potential, the TAC ecosystem remains fragmented, with unequal growth and limited discoverability for small-scale operators. A decentralized, community-driven approach can bridge these gaps and drive sustainable, inclusive growth.
-                </motion.p>
+                    <DescriptionText
+                        className={"lg:w-3/4 mt-4 2xl:mt-8"}
+                        content={"Despite its vast potential, the TAC ecosystem remains fragmented, with unequal growth and limited discoverability for small-scale operators. A decentralized, community-driven approach can bridge these gaps and drive sustainable, inclusive growth."}
+                    />
+                </motion.div>
             </div>
 
             {/* Scrollable Cards */}

@@ -1,6 +1,8 @@
 'use client'
 
 import { motion } from "framer-motion";
+import HeaderText from "@/Components/HeaderText/HeaderText";
+import DescriptionText from "@/Components/DescriptionText/DescriptionText";
 
 const currentVideo = "_f6XPlUkWDc";
 
@@ -8,9 +10,8 @@ export default function BeginSection() {
     return (
         <div id="movementBegins" className="flex flex-col gap-10 md:gap-16 px-4 py-10 md:p-8 lg:p-16">
             <div>
-                <h2 className="text-[2rem] md:text-4xl lg:text-5xl font-semibold text-[var(--brown)] mb-8">The OneTAC Movement Begins</h2>
-                <p className="md:text-md xl:text-xl">
-                    Watch our launch at Bengaluru Tech Summit 2024 discussing why tourism needs a radical transformation—and how OneTAC is leading the charge.                </p>
+                <HeaderText text="The OneTAC Movement Begins" className={"mb-8"} />
+                <DescriptionText content={"Watch our launch at Bengaluru Tech Summit 2024 discussing why tourism needs a radical transformation—and how OneTAC is leading the charge."} />
             </div>
             <motion.div
                 className="w-full h-[18rem] sm:h-[20rem] xl:h-[30rem] 2xl:h-[38rem] overflow-hidden rounded-2xl shadow-lg"

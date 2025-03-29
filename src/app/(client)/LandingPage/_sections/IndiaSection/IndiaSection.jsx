@@ -7,6 +7,7 @@ import Link from "next/link";
 import slide1 from "../../../../../../public/assets/slide_1.webp";
 import slide2 from "../../../../../../public/assets/slide_2.webp";
 import Marquee from "react-fast-marquee";
+import DescriptionText from "@/Components/DescriptionText/DescriptionText";
 
 const stats = [
     { label: "Livelihoods empowered by 2030.", value: "10M", span: "+" },
@@ -37,19 +38,20 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="px-4 md:px-8 lg:px-16 text-left"
             >
-                <h1 className="relative text-[2rem] md:text-4xl lg:text-5xl font-medium xl:leading-16 mb-4 text-[var(--brown)]">
+                <h1 className="relative text-[var(--brown)] text-[2rem] md:text-4xl lg:text-5xl 3xl:text-6xl font-semibold md:leading-12 lg:leading-16 3xl:leading-20">
                     India's stories deserve a stage.{isWideScreen && <br />} OneTAC envisions:
                     <motion.span
                         initial={{ scaleX: 0 }}
                         whileInView={{ scaleX: 1 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
                         viewport={{ once: true }}
-                        className="absolute block top-5 md:top-8 left-0 bg-amber-200 w-[65%] xl:w-[60%] md:w-1/4 h-6 rounded-lg -z-10"
+                        className="absolute block top-5 md:top-8 left-0 bg-amber-200 w-[60%] md:w-1/4 h-6 rounded-lg -z-10"
                     />
                 </h1>
-                <p className="md:text-md xl:text-xl xl:w-[55%]">
-                    An intelligent, interconnected, and thriving tourism ecosystem where every unique TAC asset and experience in India is brought to the mainstream, and is digitally accessible by all.
-                </p>
+                <DescriptionText
+                    className={"xl:w-[55%] 2xl:w-[80%] mt-4 2xl:mt-8"}
+                    content={`An intelligent, interconnected, and thriving tourism ecosystem where every unique TAC asset and experience in India is brought to the mainstream, and is digitally accessible by all.`}
+                />
             </motion.section>
 
             <motion.section

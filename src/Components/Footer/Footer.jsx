@@ -20,10 +20,10 @@ export default function Footer() {
         <footer className="flex flex-col gap-10 md:gap-16 px-4 md:px-8 py-8 lg:px-16 lg:py-10">
             <div className="flex flex-col items-center gap-8 md:gap-0 md:items-start md:flex-row md:justify-between">
                 <div className="flex flex-col gap-1">
-                    <h1 className="text-4xl md:text-[2.5rem] lg:text-6xl font-argaka">
+                    <h1 className="text-4xl md:text-[2.5rem] lg:text-6xl 2xl:text-7xl font-argaka">
                         Explore <span className="text-[var(--brown)]">India</span> with us
                     </h1>
-                    <p className="w-full md:w-2/3 text-xs lg:text-base">
+                    <p className="w-full md:w-2/3 text-xs lg:text-base 2xl:text-xl">
                         Step into the heart of India with curated travel experience that showcases its timeless cultures and tradition.
                     </p>
                 </div>

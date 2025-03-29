@@ -1,15 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import HeaderText from "@/Components/HeaderText/HeaderText";
 import Image from "next/image";
 import { imgData } from "./imgData";
 
 export default function CollabSection() {
     return (
         <div id="collaborative" className="px-4 py-10 md:p-8 lg:p-16 flex flex-col items-start gap-10 lg:gap-16">
-            <h1 className="text-[2rem] md:text-4xl lg:text-5xl font-semibold text-[var(--brown)]">
-                OneTAC Collaborative
-            </h1>
+            <HeaderText text="Collaborative" />
 
             <motion.div
                 className="flex items-center justify-center flex-wrap gap-8"

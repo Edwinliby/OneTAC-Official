@@ -48,10 +48,10 @@ export default function HeroSection() {
                     className="flex flex-col items-center gap-6 md:gap-8 px-2 w-full absolute top-[32%] left-[50%] translate-x-[-50%] text-center"
                     style={{ opacity, translateY }}
                 >
-                    <p className="italic font-bold px-8 text-xs md:text-sm">
+                    <p className="italic font-bold px-8 text-xs md:text-sm 2xl:text-lg">
                         Discover more. Connect more. Experience more—with OneTAC
                     </p>
-                    <h1 className="w-full text-center font-telma text-4xl md:text-6xl xl:text-8xl leading-12 md:leading-18 xl:leading-28 sm:whitespace-nowrap">
+                    <h1 className="w-full text-center font-telma text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl leading-12 md:leading-18 xl:leading-22 2xl:leading-28 sm:whitespace-nowrap">
                         Unlock India's soul <br />
                         One experience at a time
                     </h1>

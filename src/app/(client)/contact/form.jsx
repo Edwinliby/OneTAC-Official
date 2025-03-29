@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Image from "next/image";
 import { useForm, Controller } from "react-hook-form";
 import Logo from '@/../public/assets/logo_color.webp';
+import HeaderText from "@/Components/HeaderText/HeaderText";
+import DescriptionText from '@/Components/DescriptionText/DescriptionText';
 
 const countryCodes = [
     { code: '+91', country: 'India', abbr: 'IN' },
@@ -55,8 +57,8 @@ export default function Form() {
                             height={120}
                         />
                         <div>
-                            <h1 className="text-[2rem] md:text-4xl lg:text-5xl font-bold mb-4 text-gray-800">Get in Touch with Us</h1>
-                            <p className="text-gray-600 sm:text-lg">We offer expert services tailored to your needs. We'll get back to you within 24 hours!</p>
+                            <HeaderText text="Get in Touch with Us" className={"text-gray-800 mb-4 "} />
+                            <DescriptionText content="Have a question, feedback, or just want to say hi? We'd love to hear from you!" className={"text-gray-600"} />
                         </div>
                     </div>
 
@@ -70,7 +72,7 @@ export default function Form() {
                                 {...register('fullName', {
                                     required: 'Full Name is required'
                                 })}
-                                className={`mt-1 block w-full px-3 py-3 placeholder:text-sm bg-white border ${errors.fullName ? 'border-red-500' : 'border-gray-300'
+                                className={`mt-1 block w-full px-3 py-3 placeholder:text-sm bg-white border ${errors.fullName ? 'border-red-500' : 'border-amber-200'
                                     } rounded-md shadow-xs focus:outline-none focus:ring-yellow-500 focus:border-yellow-500`}
                                 placeholder="Enter your name"
                             />
@@ -94,7 +96,7 @@ export default function Form() {
                                             message: "Invalid email address"
                                         }
                                     })}
-                                    className={`mt-1 block w-full px-3 py-3 placeholder:text-sm bg-white border ${errors.email ? 'border-red-500' : 'border-gray-300'
+                                    className={`mt-1 block w-full px-3 py-3 placeholder:text-sm bg-white border ${errors.email ? 'border-red-500' : 'border-amber-200'
                                         } rounded-md shadow-xs focus:outline-none focus:ring-yellow-500 focus:border-yellow-500`}
                                     placeholder="Enter your email"
                                 />
@@ -110,7 +112,7 @@ export default function Form() {
                                     <select
                                         id="countryCode"
                                         defaultValue="+91"
-                                        className="block px-3 py-3 bg-white border border-gray-300 rounded-l-md focus:ring-yellow-500 focus:border-yellow-500"
+                                        className="block px-3 py-3 bg-white border border-amber-200 rounded-l-md focus:ring-yellow-500 focus:border-yellow-500"
                                     >
                                         {countryCodes.map((country) => (
                                             <option key={country.code} value={country.code}>{country.code}</option>
@@ -127,7 +129,7 @@ export default function Form() {
                                             }
                                         })}
                                         className={`flex-grow block px-3 py-3 placeholder:text-sm bg-white border 
-                                                    ${errors.phoneNumber ? 'border-red-500' : 'border-gray-300'} 
+                                                    ${errors.phoneNumber ? 'border-red-500' : 'border-amber-200'} 
                                                     shadow-xs rounded-r-md focus:outline-none focus:ring-yellow-500 focus:border-yellow-500`}
                                         placeholder="Phone number"
                                     />
@@ -147,7 +149,7 @@ export default function Form() {
                                 {...register('organisationName', {
                                     required: 'Organisation Name is required'
                                 })}
-                                className={`mt-1 block w-full px-3 py-3 text-sm text-gray-700 bg-white border ${errors.typeOfEngagement ? 'border-red-500' : 'border-gray-300'
+                                className={`mt-1 block w-full px-3 py-3 text-sm text-gray-700 bg-white border ${errors.typeOfEngagement ? 'border-red-500' : 'border-amber-200'
                                     } rounded-md shadow-xs focus:outline-none focus:ring-yellow-500 focus:border-yellow-500`}
                                 placeholder="Enter your organisation name"
                             />
@@ -167,7 +169,7 @@ export default function Form() {
                                     {...register('location', {
                                         required: 'Location is required'
                                     })}
-                                    className={`mt-1 block w-full px-3 py-3 text-sm text-gray-700 bg-white border ${errors.typeOfEngagement ? 'border-red-500' : 'border-gray-300'
+                                    className={`mt-1 block w-full px-3 py-3 text-sm text-gray-700 bg-white border ${errors.typeOfEngagement ? 'border-red-500' : 'border-amber-200'
                                         } rounded-md shadow-xs focus:outline-none focus:ring-yellow-500 focus:border-yellow-500`}
                                 >
                                     <option value="">Select your State</option>
@@ -188,7 +190,7 @@ export default function Form() {
                                     {...register('typeOfEngagement', {
                                         required: 'Type of Engagement is required'
                                     })}
-                                    className={`mt-1 block w-full px-3 py-3 text-sm text-gray-700 bg-white border ${errors.typeOfEngagement ? 'border-red-500' : 'border-gray-300'
+                                    className={`mt-1 block w-full px-3 py-3 text-sm text-gray-700 bg-white border ${errors.typeOfEngagement ? 'border-red-500' : 'border-amber-200'
                                         } rounded-md shadow-xs focus:outline-none focus:ring-yellow-500 focus:border-yellow-500`}
                                 >
                                     <option value="">Select your category</option>
@@ -209,7 +211,7 @@ export default function Form() {
                                 id="message"
                                 {...register('message')}
                                 rows={4}
-                                className="mt-1 block w-full px-3 py-3 placeholder:text-sm bg-white border border-gray-300 rounded-md shadow-xs focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
+                                className="mt-1 block w-full px-3 py-3 placeholder:text-sm bg-white border border-amber-200 rounded-md shadow-xs focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
                                 placeholder="Leave us a message..."
                             ></textarea>
                         </div>
@@ -223,7 +225,7 @@ export default function Form() {
                                     {...register('privacyPolicy', {
                                         required: 'You must agree to the privacy policy'
                                     })}
-                                    className={`focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded ${errors.privacyPolicy ? 'border-red-500' : ''
+                                    className={`focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-amber-200 rounded ${errors.privacyPolicy ? 'border-red-500' : ''
                                         }`}
                                 />
                             </div>

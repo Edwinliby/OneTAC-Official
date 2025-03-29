@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import HeaderText from "@/Components/HeaderText/HeaderText";
 import { motion } from "framer-motion";
 import one from "@/../public/assets/bento/1.webp";
 import two from "@/../public/assets/bento/2.webp";
@@ -27,9 +28,7 @@ const itemVariants = {
 export default function BentoSection() {
     return (
         <div id="opportunity" className="px-4 py-10 md:p-8 lg:p-16 flex flex-col gap-8 lg:gap-16">
-            <h1 className="text-[2rem] md:text-4xl lg:text-5xl font-semibold text-[var(--brown)]">
-                The Market Opportunity
-            </h1>
+            <HeaderText text="The Market Opportunity" />
 
             <motion.div
                 className="grid grid-cols-1 xl:grid-cols-2 gap-4 w-full mx-auto auto-rows-fr"

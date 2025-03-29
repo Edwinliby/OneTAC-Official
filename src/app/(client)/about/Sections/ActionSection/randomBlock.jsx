@@ -74,7 +74,7 @@ export default function RandomBlock() {
                     i === randomIndex ? { ...block, content: newContent } : block
                 );
             });
-        }, 2500); // Update every 4 seconds
+        }, 1800); // Update every 1.8 seconds
 
         return () => clearInterval(intervalRef.current);
     }, [dataSet, getUniqueContent, blocks]);
@@ -87,7 +87,7 @@ export default function RandomBlock() {
                     <motion.div
                         key={block.id}
                         layoutId={`block-${block.id}`} // Ensures smooth transitions
-                        className="w-[10rem] h-[10rem] sm:w-[12rem] sm:h-[12rem] md:w-[15rem] md:h-[15rem] lg:w-[18rem] 2xl:w-[25rem] lg:h-[18rem] flex items-center justify-center border border-dashed border-[var(--brown)]"
+                        className="w-[10rem] h-[10rem] sm:w-[12rem] sm:h-[12rem] md:w-[15rem] md:h-[15rem] lg:w-[18rem] xl:w-[20rem] 2xl:w-[22rem] 3xl:w-[25rem] lg:h-[18rem] flex items-center justify-center border border-dashed border-[var(--brown)]"
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
                     >

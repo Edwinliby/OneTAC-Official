@@ -88,7 +88,7 @@ export default function Navbar() {
                     draggable={false}
                     width={100}
                     height={100}
-                    className={`w-fit h-[2.5rem] md:h-[3.5rem] ${isOutsideHero ? 'hidden' : 'block'}`}
+                    className={`w-fit h-[2.5rem] md:h-[3.5rem] 2xl:h-[4.5rem] ${isOutsideHero ? 'hidden' : 'block'}`}
                 />
                 <Image
                     src={ColorLogo}
@@ -96,7 +96,7 @@ export default function Navbar() {
                     draggable={false}
                     width={100}
                     height={100}
-                    className={`w-fit h-[2.5rem] md:h-[3.5rem] ${isOutsideHero ? 'block' : 'hidden'}`}
+                    className={`w-fit h-[2.5rem] md:h-[3.5rem] 2xl:h-[4.5rem] ${isOutsideHero ? 'block' : 'hidden'}`}
                 />
             </Link>
 
@@ -105,7 +105,7 @@ export default function Navbar() {
                     <Link
                         href={item.link}
                         key={item.name}
-                        className={`font-medium hover:text-[var(--orange)]
+                        className={`font-medium hover:text-[var(--orange)] 2xl:text-xl
                                 ${isOutsideHero ? "text-black" : "text-white"}`}
                     >
                         {item.name}
@@ -117,8 +117,8 @@ export default function Navbar() {
                 <Link
                     href={navLinks[3].link}
                     className={`
-                        w-fit z-10 bg-[var(--light-Orange)] border border-white text-xs lg:text-base text-[var(--brown)]
-                        font-semibold py-1 xl:py-2 px-6 xl:px-8 rounded-lg cursor-pointer transition duration-300 shadow-lg
+                        w-fit z-10 bg-[var(--light-Orange)] border border-white text-base 2xl:text-xl text-[var(--brown)]
+                        font-semibold py-2 px-6 xl:px-8 rounded-lg cursor-pointer transition duration-300 shadow-lg
                         hover:-translate-y-2 hover:border-[var(--light-Orange)] hover:shadow-2xl hover:bg-amber-200
                         hidden lg:block
                     `}
@@ -130,22 +130,22 @@ export default function Navbar() {
                     <button
                         onClick={toggleNavbar}
                         className={`
-                            ${"flex flex-col cursor-pointer w-12 h-12 items-center justify-center space-y-1.5 group focus:outline-none relative z-50"}
+                            ${"flex flex-col cursor-pointer w-12 h-12 items-center justify-center space-y-1.5 2xl:space-y-2 group focus:outline-none relative z-50"}
                             ${isOpen ? "md:translate-x-8 rounded-4xl shadow" : ""}
                             `}
                     >
                         <span
-                            className={`block h-0.5 w-6 transition-all duration-300 ease-in-out 
+                            className={`block h-0.5 2xl:h-1 w-6 2xl:w-8 transition-all duration-300 ease-in-out 
                             ${isOutsideHero || isOpen ? "bg-black" : "bg-white"}
                             ${isOpen ? 'rotate-45 translate-y-2' : ''}`}
                         />
                         <span
-                            className={`block h-0.5 w-4 transition-all duration-300 ease-in-out self-start translate-x-5
+                            className={`block h-0.5 2xl:h-1 w-4 2xl:w-6 transition-all duration-300 ease-in-out self-start translate-x-5 2xl:translate-x-4
                             ${isOutsideHero || isOpen ? "bg-black" : "bg-white"}
                             ${isOpen ? 'opacity-0' : ''}`}
                         />
                         <span
-                            className={`block h-0.5 w-6 transition-all duration-300 ease-in-out 
+                            className={`block h-0.5 2xl:h-1 w-6 2xl:w-8 transition-all duration-300 ease-in-out 
                             ${isOutsideHero || isOpen ? "bg-black" : "bg-white"}
                             ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}
                         />

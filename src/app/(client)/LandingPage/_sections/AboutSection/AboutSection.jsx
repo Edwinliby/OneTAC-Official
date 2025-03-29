@@ -6,6 +6,8 @@ import { Sparkle } from "lucide-react"
 import { motion } from "framer-motion";
 import Img1 from '../../../../../../public/assets/1.webp'
 import Img2 from '../../../../../../public/assets/16.webp'
+import HeaderText from "@/Components/HeaderText/HeaderText";
+import DescriptionText from "@/Components/DescriptionText/DescriptionText";
 
 const list = [
     "Tourism supports 70 million jobs, yet only drives 1.77% of India's GDP",
@@ -59,12 +61,8 @@ export default function AboutSection() {
                     What is OneTAC
                     <span className="absolute left-1 -bottom-[.005rem] rounded-2xl w-full h-2 -z-10 bg-amber-200"></span>
                 </p>
-                <h2 className="text-[2rem] md:text-4xl lg:text-5xl text-[var(--brown)] font-medium xl:leading-14">
-                    India's Tourism Tipping Point
-                </h2>
-                <p className="md:text-md xl:text-xl">
-                    OneTAC is a pan-India digital grid that seamlessly connects tourism, arts, and culture (TAC) —unlocking a UPI-like transformation for India's services economy, turning tourism into India's next economic revolution, empowering travelers to discover hidden gems.
-                </p>
+                <HeaderText text={"India's Tourism Tipping Point"} className={"xl:leading-14"} />
+                <DescriptionText content={`OneTAC is a pan-India digital grid that seamlessly connects tourism, arts, and culture (TAC) —unlocking a UPI-like transformation for India's services economy, turning tourism into India's next economic revolution, empowering travelers to discover hidden gems.`} />
                 <ul className="flex flex-col gap-6">
                     {
                         list.map((item, index) => (
@@ -75,9 +73,7 @@ export default function AboutSection() {
                         ))
                     }
                 </ul>
-                <p className="md:text-md xl:text-xl">
-                    Imagine unlocking this untapped potential, equitably.
-                </p>
+                <DescriptionText content={`Imagine unlocking this untapped potential, equitably.`} />
                 <Link href='/about'
                     className="flex items-center gap-2 shadow-xl w-fit bg-[var(--light-Orange)] text-[var(--brown)] font-semibold rounded-md px-6 py-3 hover:-translate-y-1 transition-all duration-200"
                 >Know more</Link>

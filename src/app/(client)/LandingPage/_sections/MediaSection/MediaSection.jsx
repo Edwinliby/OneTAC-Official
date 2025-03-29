@@ -61,8 +61,8 @@ export default function App() {
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
-                                    <b className="text-lg lg:text-2xl">{item.title}</b>
-                                    <p className="text-sm md:text-base text-gray-600">{item.desc}</p>
+                                    <b className="text-lg 2xl:text-2xl">{item.title}</b>
+                                    <p className="text-sm 2xl:text-lg text-gray-600">{item.desc}</p>
                                 </div>
                             </Link>
                         </SwiperSlide>
