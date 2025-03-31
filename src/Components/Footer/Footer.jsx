@@ -4,14 +4,15 @@ import Newsletter from "./NewsLetter";
 import FooterLogo from "./logo";
 
 const socialLinks = [
-    { name: "Instagram", link: "https://www.instagram.com/" },
-    { name: "Linkedin", link: "https://www.linkedin.com/" },
-    { name: "YouTube", link: "https://www.youtube.com/" },
+    { name: "Instagram", link: "https://www.instagram.com/culkeyf/?hl=en/" },
+    { name: "Linkedin", link: "https://www.linkedin.com/company/culkeyf/" },
+    { name: "Twitter", link: "https://x.com/culkeyF" },
+    { name: "YouTube", link: "https://www.youtube.com/@culkeyf" },
 ];
 
 const navLinks = [
     { name: "About", link: "/about" },
-    { name: "Experience", link: "#" },
+    { name: "Impact", link: "/impact" },
     { name: "Join Community", link: "/contact" },
 ]
 

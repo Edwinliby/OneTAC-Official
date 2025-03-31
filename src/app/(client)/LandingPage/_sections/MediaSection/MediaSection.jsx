@@ -50,7 +50,7 @@ export default function App() {
                     mediaData.map((item, key) => (
                         <SwiperSlide key={key}>
                             <Link href={item.link} target="_blank" rel='noreferrer'>
-                                <div className='flex flex-col gap-2 lg:gap-3'>
+                                <div className='group flex flex-col gap-2 lg:gap-3'>
                                     <div className="h-[15rem] xl:h-[18rem] overflow-hidden rounded-2xl">
                                         <Image
                                             src={item.img}
@@ -58,7 +58,7 @@ export default function App() {
                                             draggable={false}
                                             width={400}
                                             height={400}
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full object-cover group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                                         />
                                     </div>
                                     <b className="text-lg 2xl:text-2xl">{item.title}</b>

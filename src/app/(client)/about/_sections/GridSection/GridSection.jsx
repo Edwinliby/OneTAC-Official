@@ -36,7 +36,7 @@ export default function GridSection() {
     return (
         <div className='flex flex-col px-4 py-8 sm:p-8 lg:p-16 md:mt-4'>
             <div className="flex flex-col items-start gap-8 md:gap-16">
-                <HeaderText text="OneTAC Grid" />
+                <HeaderText text="OneTAC Grid" className={'2xl:mb-8'}/>
 
                 <div className="w-full">
                     <div className="flex w-full items-start md:items-center md:justify-center lg:justify-between flex-wrap gap-6 md:gap-4 bg-white border border-[var(--brown)]/20 rounded-2xl p-6 md:bg-transparent md:rounded-none md:p-0 md:border-none">

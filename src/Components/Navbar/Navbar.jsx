@@ -28,10 +28,10 @@ const menuLinks = [
 ];
 
 const socialLinks = [
-    { name: "Instagram", link: "https://www.instagram.com/" },
-    { name: "Linkedin", link: "https://www.linkedin.com/" },
-    { name: "YouTube", link: "https://www.youtube.com/" },
-    { name: "Twitter", link: "https://twitter.com/" },
+    { name: "Instagram", link: "https://www.instagram.com/culkeyf/?hl=en/" },
+    { name: "Linkedin", link: "https://www.linkedin.com/company/culkeyf/" },
+    { name: "Twitter", link: "https://x.com/culkeyF" },
+    { name: "YouTube", link: "https://www.youtube.com/@culkeyf" },
 ]
 
 export default function Navbar() {
@@ -88,7 +88,7 @@ export default function Navbar() {
                     draggable={false}
                     width={100}
                     height={100}
-                    className={`w-fit h-[2.5rem] md:h-[3.5rem] 2xl:h-[4.5rem] ${isOutsideHero ? 'hidden' : 'block'}`}
+                    className={`w-[6rem] h-[3.5rem] 2xl:h-[4.5rem] ${isOutsideHero ? 'hidden' : 'block'}`}
                 />
                 <Image
                     src={ColorLogo}
@@ -96,7 +96,7 @@ export default function Navbar() {
                     draggable={false}
                     width={100}
                     height={100}
-                    className={`w-fit h-[2.5rem] md:h-[3.5rem] 2xl:h-[4.5rem] ${isOutsideHero ? 'block' : 'hidden'}`}
+                    className={`w-[6rem] h-[3.5rem] 2xl:h-[4.5rem] ${isOutsideHero ? 'block' : 'hidden'}`}
                 />
             </Link>
 

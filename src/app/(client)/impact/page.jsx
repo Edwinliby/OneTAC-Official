@@ -1,7 +1,19 @@
+import Img from '../../../../public/assets/32.webp'
+import Head from "@/Components/Head/Head";
+import HowSection from './_sections/HowSection/HowSection';
+import ThriveSection from './_sections/ThriveSection/ThriveSection';
+
 export default function page() {
     return (
-        <div className="flex flex-col gap-10 md:gap-14 px-4 py-10 lg:pt-32 md:p-8 lg:p-16">
-            <h1 className="text-5xl font-semibold font-argaka">Inprogress</h1>
-        </div>
+        <>
+            <Head
+                img={Img}
+                title={"Reimagining India's Stories"}
+                subTitle={"OneTAC is a catalyst for travelers, creators, entrepreneurs, and policymakers—unlocking seamless connections, digital growth, and new opportunities in tourism, arts, and culture."}
+                className={"-scale-x-[1]"}
+            />
+            <HowSection />
+            <ThriveSection />
+        </>
     )
 }

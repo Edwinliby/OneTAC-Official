@@ -10,7 +10,7 @@ export default function BeginSection() {
     return (
         <div id="movementBegins" className="flex flex-col gap-10 md:gap-16 px-4 py-10 md:p-8 lg:p-16">
             <div>
-                <HeaderText text="The OneTAC Movement Begins" className={"mb-8"} />
+                <HeaderText text="The OneTAC Movement Begins" className={"mb-8 3xl:mb-12"} />
                 <DescriptionText content={"Watch our launch at Bengaluru Tech Summit 2024 discussing why tourism needs a radical transformation—and how OneTAC is leading the charge."} />
             </div>
             <motion.div

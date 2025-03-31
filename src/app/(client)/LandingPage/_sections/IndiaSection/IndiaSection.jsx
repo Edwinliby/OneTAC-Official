@@ -88,7 +88,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="relative flex flex-col gap-14 items-center justify-center"
             >
-                <Marquee>
+                <Marquee speed={20}>
                     <div className="flex gap-3 xl:gap-5">
                         {images.map((item, index) => (
                             <motion.div

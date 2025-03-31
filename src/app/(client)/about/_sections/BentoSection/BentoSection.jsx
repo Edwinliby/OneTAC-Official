@@ -28,7 +28,7 @@ const itemVariants = {
 export default function BentoSection() {
     return (
         <div id="opportunity" className="px-4 py-10 md:p-8 lg:p-16 flex flex-col gap-8 lg:gap-16">
-            <HeaderText text="The Market Opportunity" />
+            <HeaderText text="The Market Opportunity" className={'2xl:mb-6'} />
 
             <motion.div
                 className="grid grid-cols-1 xl:grid-cols-2 gap-4 w-full mx-auto auto-rows-fr"

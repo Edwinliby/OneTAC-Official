@@ -28,7 +28,7 @@ export default function WhatSection() {
     return (
         <div id='aboutOneTAC' className="px-4 py-10 md:p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-2 items-center md:mt-8 gap-8 lg:gap-16">
             <div className="flex flex-col gap-6 md:gap-8">
-                <HeaderText text="What is OneTAC" />
+                <HeaderText text="What is OneTAC" className={'2xl:mb-8'} />
                 <DescriptionText content={content} />
                 <h2 className="text-[var(--brown)] font-semibold text-lg md:text-2xl 3xl:text-3xl">Key Features:</h2>
                 <div className="flex flex-wrap gap-6">

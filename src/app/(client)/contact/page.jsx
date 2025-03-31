@@ -7,8 +7,8 @@ export default function page() {
         <>
             <Head
                 img={Img}
-                title={"How OneTAC Works for You"}
-                subTitle={"Empowering travelers, artisans, businesses and volunteers to connect through India's cultural stories"}
+                title={"Get in Touch with Us"}
+                subTitle={"Have a question, feedback, or just want to say hi? We'd love to hear from you!"}
             />
             <Form />
         </>
