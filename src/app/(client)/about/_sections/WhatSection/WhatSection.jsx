@@ -1,7 +1,4 @@
-'use client'
-
 import { Sparkle } from "lucide-react"
-import { motion } from "framer-motion";
 import HeaderText from "@/Components/HeaderText/HeaderText";
 import DescriptionText from "@/Components/DescriptionText/DescriptionText";
 

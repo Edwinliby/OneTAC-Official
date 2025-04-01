@@ -13,7 +13,6 @@ export default function VillageSection() {
     const startX = useRef(0);
     const scrollLeft = useRef(0);
     const [isWideScreen, setIsWideScreen] = useState(false);
-    const [loadedVideos, setLoadedVideos] = useState(new Set());
     const sectionRef = useRef(null);
     const [isSectionVisible, setIsSectionVisible] = useState(false);
 
@@ -130,7 +129,7 @@ export default function VillageSection() {
                             alt="Video Placeholder"
                             className={`w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-300 ${hoveredIndex === index ? "opacity-0" : "opacity-100"}`}
                         />
-                        {isSectionVisible && ( // Load videos only when the section is about to enter viewport
+                        {isSectionVisible && ( 
                             <video
                                 data-index={index}
                                 src={card.vid}
