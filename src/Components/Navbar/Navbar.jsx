@@ -17,12 +17,9 @@ const navLinks = [
 
 const menuLinks = [
     { name: "Home", link: "/" },
-    { name: "About OneTAC", link: "/about#aboutOneTAC" },
-    { name: "The OneTAC Movement Begins", link: "/partners#movementBegins" },
-    { name: "OneTAC Collaborative", link: "/partners#collaborative" },
+    { name: "About OneTAC", link: "/about" },
+    { name: "People and Partnerships", link: "/partners" },
     { name: "Impact & Experience", link: "/impact" },
-    { name: "The Market Opportunity", link: "/about#opportunity" },
-    { name: "News & Stories", link: "/#news" },
     { name: "OneTAC Brochure", link: "https://onetac.org/wp-content/uploads/2024/11/OneTAC-Concept-Note-Opt.pdf" },
     { name: "Engage with us", link: "/contact" },
 ];

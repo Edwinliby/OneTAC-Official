@@ -58,9 +58,9 @@ export default function HeroSection() {
                 </motion.div>
 
                 <div className="w-full text-sm absolute bottom-6 md:bottom-10 px-4 md:px-8 xl:px-16 font-semibold flex items-center justify-between">
-                    <button onClick={() => setIsMuted(!isMuted)} className="flex items-center gap-1.5">
+                    {/* <button onClick={() => setIsMuted(!isMuted)} className="flex items-center gap-1.5">
                         {isMuted ? <>Unmute <VolumeOff size={18} /></> : <>Mute <Volume2 size={18} /></>}
-                    </button>
+                    </button> */}
                     <motion.p
                         key={languages[currentLanguageIndex]}
                         initial={{ opacity: 0, y: 10 }}

@@ -15,7 +15,9 @@ export default function Card({ sliceStart, sliceEnd, items, className }) {
             {
                 items.slice(sliceStart, sliceEnd).map((item) => (
                     <div key={item.id} className="relative group perspective-distant w-full xl:w-fit h-[13rem] md:h-[15rem] 2xl:h-[18rem] 3xl:h-[22rem]" onClick={() => handleFlip(item.id)}>
-                        <div className={`transform-3d transition-all duration-500 ease-in-out relative w-full h-full ${flippedId === item.id ? 'rotate-y-180' : ''}  hover:rotate-y-180`}>
+                        <div
+                            className={`relative w-full h-full cursor-pointer transition-transform duration-500 ease-in-out transform-3d ${flippedId === item.id ? 'rotate-y-180' : ''}`}
+                        >
                             <Image
                                 src={item.img}
                                 alt={item.title}

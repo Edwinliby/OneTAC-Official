@@ -66,7 +66,7 @@ export default function ImageComparisonSlider() {
 
     return (
         <div
-            className="flex flex-col gap-10 md:gap-16 px-4 py-10 md:p-8 lg:p-16 pb-20 overflow-hidden md:overflow-visible"
+            className="flex flex-col gap-10 md:gap-16 px-4 pb-24 py-10 md:p-8 lg:p-16 md:mb-10 overflow-hidden md:overflow-visible"
             onMouseMove={handleMove}
             onTouchMove={handleMove}
             onMouseUp={handleMouseUp}
@@ -125,7 +125,7 @@ export default function ImageComparisonSlider() {
                 <div className="absolute top-0 w-1 md:w-1.5 bg-[var(--orange)] h-[110%]"
                     style={{ left: `${sliderPosition}%`, transform: "translateX(-50%)" }}>
                     <div
-                        className="absolute -bottom-[10%] md:-bottom-[5%] left-1/2 transform -translate-x-1/2 bg-amber-400 rounded-full shadow-lg border border-white cursor-grab active:cursor-grabbing"
+                        className="absolute -bottom-[8%] md:-bottom-[3%] xl:-bottom-[5%] left-1/2 transform -translate-x-1/2 bg-amber-400 rounded-full shadow-lg border border-white cursor-grab active:cursor-grabbing"
                         onMouseDown={handleMouseDown}
                         onTouchStart={handleTouchStart}
                     >

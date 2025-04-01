@@ -25,9 +25,9 @@ const fadeIn = {
 
 export default function ScaleSection() {
     return (
-        <motion.div 
-            initial="hidden" 
-            whileInView="visible" 
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={containerVariants}
             className="flex flex-col gap-10 md:gap-16 px-4 py-10 md:p-8 lg:p-16"
@@ -69,17 +69,17 @@ export default function ScaleSection() {
                 A Wave of Use Cases Unlocked
             </motion.h3>
 
-            <motion.div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 items-center" variants={containerVariants}>
+            <motion.div className="grid grid-cols-2 xl:grid-cols-4 gap-2 md:gap-4 items-center" variants={containerVariants}>
                 {scaleData.map((card, index) => (
-                    <motion.div 
+                    <motion.div
                         key={index}
-                        className="relative group w-full h-[25rem] xl:h-[30rem] 2xl:h-[35rem] bg-gray-400 rounded-2xl overflow-hidden"
+                        className="relative group w-full h-[18rem] md:h-[25rem] xl:h-[30rem] 2xl:h-[35rem] bg-gray-400 rounded-xl md:rounded-2xl overflow-hidden"
                         variants={fadeIn}
                     >
                         <Image src={card.img} alt="Video Placeholder" className="w-full h-full group-active:scale-105 hover:scale-105 object-cover absolute top-0 left-0 transition-all ease-in-out duration-300" />
-                        <div className="w-full absolute bottom-0 left-0 z-10 text-white flex flex-col gap-1 p-4 bg-gradient-to-t from-black">
-                            <b className="text-lg 2xl:text-2xl">{card.place}</b>
-                            <p className="text-xs md:test-md 2xl:text-lg text-gray-300 md:text-gray-200">{card.desc}</p>
+                        <div className="w-full absolute bottom-0 left-0 z-10 text-white flex flex-col gap-1 p-2 sm:p-4 bg-gradient-to-t from-black">
+                            <b className="sm:text-lg 2xl:text-2xl">{card.place}</b>
+                            <p className="text-[.6rem] md:test-md 2xl:text-lg text-gray-300 md:text-gray-200">{card.desc}</p>
                         </div>
                     </motion.div>
                 ))}

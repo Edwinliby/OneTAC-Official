@@ -15,7 +15,7 @@ export default function ActionSection() {
                         hover:-translate-y-2 hover:border-[var(--light-Orange)] hover:shadow-2xl hover:bg-amber-200
                     `}
                     >
-                        <Link href='/contact'>Explore the opportunities</Link>
+                        <Link href='/impact'>Explore the opportunities</Link>
                     </div>
                     <div
                         className={`
