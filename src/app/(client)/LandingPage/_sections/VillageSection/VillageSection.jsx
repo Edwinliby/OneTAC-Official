@@ -12,13 +12,8 @@ export default function VillageSection() {
     const isDown = useRef(false);
     const startX = useRef(0);
     const scrollLeft = useRef(0);
-    const [isWideScreen, setIsWideScreen] = useState(false);
     const sectionRef = useRef(null);
     const [isSectionVisible, setIsSectionVisible] = useState(false);
-
-    useEffect(() => {
-        setIsWideScreen(window.innerWidth >= 768);
-    }, []);
 
     // Intersection Observer to track section entry (20% before)
     useEffect(() => {
@@ -77,7 +72,7 @@ export default function VillageSection() {
                     viewport={{ once: true }}
                     className="text-[var(--brown)] text-[2rem] md:text-4xl lg:text-5xl 3xl:text-6xl font-semibold md:leading-12 lg:leading-16 3xl:leading-20"
                 >
-                    Every part of India is a story to tell.{isWideScreen && <br />} {" "} OneTAC helps the world hear it.
+                    India: A Cultural Odyssey
                 </motion.h1>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -85,8 +80,8 @@ export default function VillageSection() {
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
                 >
                     <DescriptionText
-                        className={"lg:w-3/4 mt-4 2xl:mt-8"}
-                        content={"Despite its vast potential, the TAC ecosystem remains fragmented, with unequal growth and limited discoverability for small-scale operators. A decentralized, community-driven approach can bridge these gaps and drive sustainable, inclusive growth."}
+                        className={"mt-4 2xl:mt-8"}
+                        content={"From snow-capped peaks to vibrant festivals, India’s cultural wealth is unmatched, offering a rich tapestry of traditions, art, and heritage that stretches across centuries. Despite this, India’s cultural influence remains underutilized due to fragmentation, unequal growth, and limited discoverability. By uniting the Tourism, Arts, and Culture (TAC) ecosystem through tech-driven solutions, India can unlock its true power and emerge as a global leader in immersive cultural experiences."}
                     />
                 </motion.div>
             </div>
@@ -129,7 +124,7 @@ export default function VillageSection() {
                             alt="Video Placeholder"
                             className={`w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-300 ${hoveredIndex === index ? "opacity-0" : "opacity-100"}`}
                         />
-                        {isSectionVisible && ( 
+                        {isSectionVisible && (
                             <video
                                 data-index={index}
                                 src={card.vid}

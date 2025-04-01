@@ -15,7 +15,7 @@ export default function HowSection() {
                     alt="vector"
                     width={800}
                     height={800}
-                    className="hidden xl:block absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] h-full "
+                    className="hidden xl:block absolute top-[50%] inset-x-0 -translate-y-1/2 w-[100%] h-full "
                 />
                 <Card
                     sliceStart={0}

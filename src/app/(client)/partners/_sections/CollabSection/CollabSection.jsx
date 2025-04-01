@@ -8,7 +8,7 @@ import { imgData } from "./imgData";
 export default function CollabSection() {
     return (
         <div id="collaborative" className="px-4 py-10 md:p-8 lg:p-16 flex flex-col items-start gap-10 lg:gap-16">
-            <HeaderText text="OneTAC Collaborative" />
+            <HeaderText text="The OneTAC Collective" />
 
             <motion.div
                 className="flex items-center justify-center flex-wrap gap-8"

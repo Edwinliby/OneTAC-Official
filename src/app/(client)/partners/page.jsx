@@ -10,7 +10,7 @@ export default function page() {
         <>
             <Head
                 img={Img}
-                title={"People and Partnerships"}
+                title={"The OneTAC Community"}
                 subTitle={"It takes a collective to build a movement. ONE TAC is anchored by visionary institutions, driven by passionate individuals, and supported by a growing ecosystem of changemakers committed to shaping the future of India's Experience Economy."}
             />
             <BeginSection />

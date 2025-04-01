@@ -61,7 +61,7 @@ export default function AboutSection() {
                     What is OneTAC
                     <span className="absolute left-1 -bottom-[.005rem] rounded-2xl w-full h-2 -z-10 bg-amber-200"></span>
                 </p>
-                <HeaderText text={"India's Tourism Tipping Point"} className={"xl:leading-14"} />
+                <HeaderText text={"The Future of India's Tourism, Art & Culture"} className={"xl:leading-14"} />
                 <DescriptionText content={`OneTAC is a pan-India digital grid that seamlessly connects tourism, arts, and culture (TAC) —unlocking a UPI-like transformation for India's services economy, turning tourism into India's next economic revolution, empowering travelers to discover hidden gems.`} />
                 <ul className="flex flex-col gap-6">
                     {

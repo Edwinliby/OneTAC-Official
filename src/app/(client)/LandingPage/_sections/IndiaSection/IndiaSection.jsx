@@ -10,9 +10,9 @@ import Marquee from "react-fast-marquee";
 import DescriptionText from "@/Components/DescriptionText/DescriptionText";
 
 const stats = [
-    { label: "Livelihoods empowered by 2030.", value: "10M", span: "+" },
-    { label: "Cultural experiences digitized.", value: "5,000", span: "+" },
-    { label: "Intermediaries. 100% authenticity", value: "zer", span: "o" },
+    { label: "Livelihoods empowered by 2035.", value: "200M", span: "+" },
+    { label: "Tourism's contribution to Indian Economy", value: "1Tn", span: "$" },
+    { label: "Cultural experiences digitized", value: "5000", span: "+" },
 ];
 
 const images = [
@@ -39,7 +39,7 @@ export default function Home() {
                 className="px-4 md:px-8 lg:px-16 text-left"
             >
                 <h1 className="relative text-[var(--brown)] text-[2rem] md:text-4xl lg:text-5xl 3xl:text-6xl font-semibold md:leading-12 lg:leading-16 3xl:leading-20">
-                    India's stories deserve a stage.{isWideScreen && <br />} OneTAC envisions:
+                    Giving India's Stories the Stage They Deserve:
                     <motion.span
                         initial={{ scaleX: 0 }}
                         whileInView={{ scaleX: 1 }}
@@ -49,8 +49,8 @@ export default function Home() {
                     />
                 </h1>
                 <DescriptionText
-                    className={"xl:w-[55%] 2xl:w-[80%] mt-4 2xl:mt-8"}
-                    content={`An intelligent, interconnected, and thriving tourism ecosystem where every unique TAC asset and experience in India is brought to the mainstream, and is digitally accessible by all.`}
+                    className={"xl:w-[80%] mt-4 2xl:mt-8"}
+                    content={`OneTAC envisions a smart, connected, and thriving tourism ecosystem where every TAC experience is accessible, small businesses gain fair market reach, and travelers engage in immersive, sustainable tourism—all powered by a scalable digital backbone driving trust and innovation.`}
                 />
             </motion.section>
 

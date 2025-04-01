@@ -6,7 +6,6 @@ import six from "../../../../../../public/assets/6.webp";
 import seven from "../../../../../../public/assets/7.webp";
 import eight from "../../../../../../public/assets/8.webp";
 import nine from "../../../../../../public/assets/9.webp";
-import ten from "../../../../../../public/assets/10.webp";
 import eleven from "../../../../../../public/assets/11.webp";
 import twelve from "../../../../../../public/assets/12.webp";
 import fourteen from "../../../../../../public/assets/14.webp";
@@ -54,7 +53,6 @@ export const randomData = [
   seven,
   eight,
   nine,
-  ten,
   eleven,
   twelve,
   fourteen,

@@ -45,19 +45,19 @@ export default function BentoSection() {
                     </motion.div>
 
                     <motion.div className="group overflow-hidden w-full h-full flex flex-col justify-between bg-white rounded-2xl shadow-md" variants={itemVariants}>
-                        <p className="font-bold text-2xl p-8 py-10">Market size and <b className="text-[var(--brown)]">projections</b></p>
+                        <p className="absolute sm:relative font-bold text-2xl p-6 py-6 sm:p-8 sm:py-10">Market size and <b className="text-[var(--brown)]">projections</b></p>
                         <Image
                             src={two}
                             alt="bento images"
                             draggable={false}
                             width={600}
                             height={600}
-                            className="w-full h-fit object-contain px-6 group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
+                            className="w-full h-fit object-contain pt-6 sm:pt-0 px-6 group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                         />
                     </motion.div>
 
-                    <motion.div className="overflow-hidden group w-full h-full flex flex-col justify-between gap-4 bg-white rounded-2xl shadow-md p-8 py-10" variants={itemVariants}>
-                        <p className="text-4xl">Enabling <b className="text-[var(--brown)]">Livelihoods</b></p>
+                    <motion.div className="overflow-hidden group w-full h-full flex flex-col justify-between bg-white rounded-2xl shadow-md p-6 sm:p-8 sm:py-10" variants={itemVariants}>
+                        <p className="text-4xl pb-4">Enabling <b className="text-[var(--brown)]">Livelihoods</b></p>
                         <p className="text-xl xl:text-2xl">Turning every corner of India into a global destination by 2047.</p>
                         <Image
                             src={one}
@@ -74,10 +74,10 @@ export default function BentoSection() {
                             <p className="font-semibold group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out">OneTAC <br />Ambition</p>
                         </motion.div>
                         <motion.div className="group w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
-                            <p className="text-xs group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out"><b className="text-4xl">$1 Tn+</b><br />Economy</p>
+                            <p className="text-xs group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out"><b className="text-4xl">$3 Tn+</b><br />Economy</p>
                         </motion.div>
                         <motion.div className="group w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
-                            <p className="text-xs group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out"><b className="text-4xl">600 K</b><br />Villages</p>
+                            <p className="text-xs group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out"><b className="text-4xl">700 +</b><br />Districts</p>
                         </motion.div>
                         <motion.div className="group w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
                             <p className="font-semibold group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out">Untapped <br />Experiences </p>
@@ -86,7 +86,7 @@ export default function BentoSection() {
                             <p className="font-semibold group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out">Stories <br />Unlocked</p>
                         </motion.div>
                         <motion.div className="group w-full h-full py-6 grid place-content-center bg-white rounded-2xl shadow-md" variants={itemVariants}>
-                            <p className="text-xs group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out"><b className="text-4xl">35 Mn</b><br />New Jobs</p>
+                            <p className="text-xs group-active:scale-110 hover:scale-110 transition duration-500 ease-in-out"><b className="text-4xl">250 Mn</b><br />New Jobs</p>
                         </motion.div>
                     </div>
                 </motion.div>
@@ -94,7 +94,7 @@ export default function BentoSection() {
                 {/* Right Grid */}
                 <motion.div className="col-span-1 row-span-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="col-span-1 row-span-2 grid grid-cols-1 gap-4">
-                        <motion.div className="group w-full h-full row-span-2 flex flex-col justify-between gap-4 overflow-hidden bg-white rounded-2xl shadow-md px-8 pt-10" variants={itemVariants}>
+                        <motion.div className="w-full h-fit sm:h-full flex flex-col gap-6 sm:gap-0 group justify-between overflow-hidden bg-white rounded-2xl shadow-md px-6 sm:px-8 pt-10" variants={itemVariants}>
                             <div>
                                 <p className="text-4xl mb-6">For <b className="text-[var(--brown)]">Startups</b></p>
                                 <p className="text-xl xl:text-2xl">A ready-made grid to build on, not from scratch</p>
@@ -108,7 +108,7 @@ export default function BentoSection() {
                                 className="w-full h-fit object-contain group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                             />
                         </motion.div>
-                        <motion.div className="group w-full h-full relative overflow-hidden shadow-md bg-white rounded-2xl" variants={itemVariants}>
+                        <motion.div className="hidden sm:flex items-center justify-center group w-full h-full relative overflow-hidden shadow-md bg-white rounded-2xl" variants={itemVariants}>
                             <Image
                                 src={three}
                                 alt="bento images"
@@ -121,7 +121,7 @@ export default function BentoSection() {
                     </div>
 
                     <div className="col-span-1 row-span-2 grid grid-cols-1 gap-4">
-                        <motion.div className="group w-full h-full overflow-hidden flex items-center justify-center shadow-md bg-white rounded-2xl" variants={itemVariants}>
+                        <motion.div className="hidden sm:flex items-center justify-center group w-full h-full overflow-hidden shadow-md bg-white rounded-2xl" variants={itemVariants}>
                             <Image
                                 src={five}
                                 alt="bento images"
@@ -132,7 +132,7 @@ export default function BentoSection() {
                             />
                         </motion.div>
 
-                        <motion.div className="w-full h-full flex flex-col items-start justify-between bg-white rounded-2xl shadow-md p-8 py-14" variants={itemVariants}>
+                        <motion.div className="w-full h-fit sm:h-full flex flex-col gap-14 sm:gap-0 items-start justify-between bg-white rounded-2xl shadow-md p-6 sm:p-8" variants={itemVariants}>
                             <h3 className="text-3xl">Tap into India's tourism growth story and unlock <b className="text-[var(--brown)]">new business models</b></h3>
                             <p className="text-4xl">For <b className="text-[var(--brown)]">Investors</b></p>
                         </motion.div>

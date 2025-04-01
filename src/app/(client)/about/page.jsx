@@ -11,7 +11,7 @@ export default function page() {
         <>
             <Head
                 img={Img}
-                title={"OneTAC: Digital Backbone For India's Tourism, Arts, and Culture."}
+                title={"OneTAC : Digital Backbone For India’s Tourism, Arts & Culture with"}
                 subTitle={"Built on open protocols, powered by innovation, designed for scale."}
             />
             <WhatSection />

@@ -19,16 +19,7 @@ const countryCodes = [
 
 export default function Form() {
     const [isSubmitting, setIsSubmitting] = useState(false);
-
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-        reset
-    } = useForm({
-        mode: 'onChange',
-        reValidateMode: 'onChange'
-    });
+    const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
 
     const onSubmit = async (data) => {
         setIsSubmitting(true);
@@ -43,7 +34,13 @@ export default function Form() {
         formBody.append("entry.99168859", data.message);
         formBody.append("entry.1690124663", data.organisationName);
         formBody.append("entry.422563962", data.location);
-        formBody.append("entry.550696973", data.typeOfEngagement);
+        if (data.typeOfEngagement === "Other") {
+            const value = "__other_option__"
+            formBody.append("entry.550696973", value);
+            formBody.append("entry.550696973.other_option_response", data.otherTypeOfEngagement);
+        } else {
+            formBody.append("entry.550696973", data.typeOfEngagement);
+        }
 
         try {
             await fetch(googleFormURL, {
@@ -197,13 +194,35 @@ export default function Form() {
                             <option value="Startup">Startup</option>
                             <option value="Investor">Investor</option>
                             <option value="Volunteer">Volunteer</option>
-                            <option value="other">Other</option>
+                            <option value="Other">Other</option>
                         </select>
                         {errors.typeOfEngagement && (
                             <p className="text-red-500 text-xs mt-1">{errors.typeOfEngagement.message}</p>
                         )}
                     </div>
                 </div>
+
+                {/* Other Type of Engagement */}
+                {
+                    watch('typeOfEngagement') === 'Other' && (
+                        <div className="mb-4">
+                            <label htmlFor="otherTypeOfEngagement" className="block text-sm font-medium text-gray-700">Custom Engagement</label>
+                            <input
+                                type="text"
+                                id="otherTypeOfEngagement"
+                                {...register('otherTypeOfEngagement', {
+                                    required: 'Type of Engagement is required'
+                                })}
+                                className={`mt-1 block w-full px-3 py-3 text-sm text-gray-700 bg-white border ${errors.otherTypeOfEngagement ? 'border-red-500' : 'border-amber-200'
+                                    } rounded-md shadow-xs focus:outline-none focus:ring-yellow-500 focus:border-yellow-500`}
+                                placeholder="Enter your type of engagement"
+                            />
+                            {errors.otherTypeOfEngagement && (
+                                <p className="text-red-500 text-xs mt-1">{errors.otherTypeOfEngagement.message}</p>
+                            )}
+                        </div>
+                    )
+                }
 
                 {/* Message */}
                 <div className="mb-4">

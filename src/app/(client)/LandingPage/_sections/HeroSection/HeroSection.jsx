@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Volume2, VolumeOff } from "lucide-react";
+// import { Volume2, VolumeOff } from "lucide-react";
 
 const HeroBg = "https://beckn-ui-application.s3.ap-south-1.amazonaws.com/OneTac/videoBg.webm";
 
 export default function HeroSection() {
-    const [isMuted, setIsMuted] = useState(true);
+    // const [isMuted, setIsMuted] = useState(true);
     const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0);
 
     const { scrollY } = useScroll();
@@ -40,6 +40,7 @@ export default function HeroSection() {
                         muted
                         loop
                         playsInline
+                        poster="/assets/heroBg.webp"
                         className="w-full h-full object-cover"
                     />
                 </div>
@@ -49,11 +50,10 @@ export default function HeroSection() {
                     style={{ opacity, translateY }}
                 >
                     <p className="italic font-bold px-8 text-xs md:text-sm 2xl:text-lg">
-                        Discover more. Connect more. Experience more—with OneTAC
+                        Discover more. Connect more. Experience
                     </p>
                     <h1 className="w-full text-center font-telma text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl leading-12 md:leading-18 xl:leading-22 2xl:leading-28 sm:whitespace-nowrap">
-                        Unlock India's soul <br />
-                        One experience at a time
+                        Unlock India's soul <br /> with OneTAC
                     </h1>
                 </motion.div>
 
@@ -75,7 +75,7 @@ export default function HeroSection() {
                 <motion.p
                     style={{ opacity, translateY }}
                     className="w-full md:w-1/2 xl:w-[28%] px-4 md:px-0 text-[.75rem] md:text-sm absolute bottom-20 md:bottom-8 left-[50%] translate-x-[-50%] text-center">
-                    Igniting the next wave of tourism, art and cultural experiences through a citizen-led, decentralised movement.
+                    Igniting the next wave of tourism, art and cultural experiences through a Community-led, decentralised movement.
                 </motion.p>
             </div>
         </div>

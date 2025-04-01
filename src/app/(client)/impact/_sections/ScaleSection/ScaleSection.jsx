@@ -78,8 +78,8 @@ export default function ScaleSection() {
                     >
                         <Image src={card.img} alt="Video Placeholder" className="w-full h-full group-active:scale-105 hover:scale-105 object-cover absolute top-0 left-0 transition-all ease-in-out duration-300" />
                         <div className="w-full absolute bottom-0 left-0 z-10 text-white flex flex-col gap-1 p-2 sm:p-4 bg-gradient-to-t from-black">
-                            <b className="sm:text-lg 2xl:text-2xl">{card.place}</b>
-                            <p className="text-[.6rem] md:test-md 2xl:text-lg text-gray-300 md:text-gray-200">{card.desc}</p>
+                            <b className="sm:text-lg xl:text-xl 2xl:text-2xl">{card.place}</b>
+                            <p className="text-[.6rem] md:text-[.9rem] 2xl:text-lg text-gray-300 md:text-gray-200">{card.desc}</p>
                         </div>
                     </motion.div>
                 ))}
