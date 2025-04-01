@@ -85,7 +85,7 @@ export default function ImageComparisonSlider() {
                         height={800}
                         className="w-full h-full object-cover rounded-2xl"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-50%  rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tl from-black/80 to-50%  rounded-2xl"></div>
                     <div className="absolute bottom-4 md:bottom-8 right-4 md:right-8 text-right w-full h-fit text-white flex flex-col gap-2">
                         <b className="text-4xl 2xl:text-6xl">After</b>
                         <ul className="py-2 text-xs md:text-lg 2xl:text-xl">
@@ -108,7 +108,7 @@ export default function ImageComparisonSlider() {
                         draggable={false}
                         className="w-full h-full object-cover rounded-2xl"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-50% rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-black/80 to-50% rounded-2xl"></div>
                     <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 w-full h-fit text-white flex flex-col gap-2">
                         <b className="text-4xl 2xl:text-6xl">Before</b>
                         <ul className="py-2 text-xs md:text-lg 2xl:text-xl">
@@ -122,7 +122,7 @@ export default function ImageComparisonSlider() {
                 </div>
 
                 {/* Slider Bar */}
-                <div className="absolute top-0 w-1.5 bg-[var(--orange)] h-[110%]"
+                <div className="absolute top-0 w-1 md:w-1.5 bg-[var(--orange)] h-[110%]"
                     style={{ left: `${sliderPosition}%`, transform: "translateX(-50%)" }}>
                     <div
                         className="absolute -bottom-[10%] md:-bottom-[5%] left-1/2 transform -translate-x-1/2 bg-amber-400 rounded-full shadow-lg border border-white cursor-grab active:cursor-grabbing"

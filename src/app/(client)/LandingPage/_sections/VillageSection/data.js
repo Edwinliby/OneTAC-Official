@@ -3,6 +3,7 @@ import Up from "../../../../../../public/videos/up.webp";
 import Tamilnadu from "../../../../../../public/videos/tamilnadu.webp";
 import Maharashtra from "../../../../../../public/videos/maharashtra.webp";
 import Delhi from "../../../../../../public/videos/delhi.webp";
+import karnataka from "../../../../../../public/videos/karnataka.webp";
 
 export const cardData = [
   {
@@ -10,6 +11,12 @@ export const cardData = [
     vid: "/videos/kerala.webm",
     place: "Kerala",
     desc: "Vibrant masks and rhythmic tales of a 500-year-old art.",
+  },
+  {
+    img: karnataka,
+    vid: "/videos/karnataka.webm",
+    place: "Karnataka",
+    desc: "Explore Gokarna’s serene beaches and ancient heritage ruins.",
   },
   {
     img: Up,
