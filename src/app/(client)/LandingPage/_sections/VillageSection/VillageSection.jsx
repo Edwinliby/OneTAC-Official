@@ -78,7 +78,7 @@ export default function VillageSection() {
                     viewport={{ once: true }}
                     className="text-[var(--brown)] text-[2rem] md:text-4xl lg:text-5xl 3xl:text-6xl font-semibold md:leading-12 lg:leading-16 3xl:leading-20"
                 >
-                    Every part of India is a story{isWideScreen && <br />} {" "} to tell + more modern experiences
+                    Every part of India is a story to tell.{isWideScreen && <br />} {" "} OneTAC helps the world hear it.
                 </motion.h1>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

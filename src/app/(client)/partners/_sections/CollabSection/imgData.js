@@ -38,6 +38,12 @@ import c37 from "../../../../../../public/partners/collab/c37.webp";
 import c38 from "../../../../../../public/partners/collab/c38.webp";
 import c39 from "../../../../../../public/partners/collab/c39.webp";
 import c40 from "../../../../../../public/partners/collab/c40.webp";
+import c41 from "../../../../../../public/partners/collab/c41.webp";
+import c42 from "../../../../../../public/partners/collab/c42.webp";
+import c43 from "../../../../../../public/partners/collab/c43.webp";
+import c44 from "../../../../../../public/partners/collab/c44.webp";
+import c45 from "../../../../../../public/partners/collab/c45.webp";
+import c46 from "../../../../../../public/partners/collab/c46.webp";
 
 export const imgData = [
   c1,
@@ -46,6 +52,12 @@ export const imgData = [
   c4,
   c5,
   c6,
+  c41,
+  c42,
+  c43,
+  c44,
+  c45,
+  c46,
   c7,
   c8,
   c9,
