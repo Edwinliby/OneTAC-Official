@@ -44,6 +44,7 @@ import c43 from "../../../../../../public/partners/collab/c43.webp";
 import c44 from "../../../../../../public/partners/collab/c44.webp";
 import c45 from "../../../../../../public/partners/collab/c45.webp";
 import c46 from "../../../../../../public/partners/collab/c46.webp";
+import c47 from "../../../../../../public/partners/collab/c47.webp";
 
 export const imgData = [
   c1,
@@ -58,6 +59,7 @@ export const imgData = [
   c44,
   c45,
   c46,
+  c47,
   c7,
   c8,
   c9,

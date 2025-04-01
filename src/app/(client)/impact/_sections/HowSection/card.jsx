@@ -25,7 +25,7 @@ export default function Card({ sliceStart, sliceEnd, items, className }) {
                                 height={800}
                                 className="object-cover object-center w-full h-full rounded-2xl"
                             />
-                            <div className="absolute inset-0 p-4 bg-black/50 rounded-2xl"></div>
+                            <div className="absolute inset-0 p-4 bg-black/20 rounded-2xl"></div>
                             <div className="absolute left-4 bottom-4 flex flex-col gap-2 text-white">
                                 <b className="text-3xl font-bold">{item.id}</b>
                                 <h3 className="text-2xl font-semibold">{item.title}</h3>

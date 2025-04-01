@@ -20,7 +20,6 @@ const menuLinks = [
     { name: "About OneTAC", link: "/about" },
     { name: "People and Partnerships", link: "/partners" },
     { name: "Impact & Experience", link: "/impact" },
-    { name: "OneTAC Brochure", link: "https://onetac.org/wp-content/uploads/2024/11/OneTAC-Concept-Note-Opt.pdf" },
     { name: "Engage with us", link: "/contact" },
 ];
 
