@@ -13,9 +13,30 @@ export default function VillageSection() {
     const startX = useRef(0);
     const scrollLeft = useRef(0);
     const [isWideScreen, setIsWideScreen] = useState(false);
+    const [loadedVideos, setLoadedVideos] = useState(new Set());
+    const sectionRef = useRef(null);
+    const [isSectionVisible, setIsSectionVisible] = useState(false);
 
     useEffect(() => {
         setIsWideScreen(window.innerWidth >= 768);
+    }, []);
+
+    // Intersection Observer to track section entry (20% before)
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsSectionVisible(true); // Load videos when section is close
+                }
+            },
+            { root: null, threshold: 0, rootMargin: "20%" } // Load when 20% before entering viewport
+        );
+
+        if (sectionRef.current) observer.observe(sectionRef.current);
+
+        return () => {
+            if (sectionRef.current) observer.unobserve(sectionRef.current);
+        };
     }, []);
 
     const handleMouseDown = (e) => {
@@ -42,6 +63,7 @@ export default function VillageSection() {
 
     return (
         <motion.div
+            ref={sectionRef}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -96,10 +118,8 @@ export default function VillageSection() {
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
                         <button
-                            className={`
-                                 z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-12 h-12 backdrop-blur-sm bg-amber-50/10 border-2 border-[var(--orange)] rounded-full
-                                ${hoveredIndex === index ? "opacity-0" : "opacity-100"
-                                }`}
+                            className={`z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-12 h-12 backdrop-blur-sm bg-amber-50/10 border-2 border-[var(--orange)] rounded-full
+                                ${hoveredIndex === index ? "opacity-0" : "opacity-100"}`}
                         >
                             <svg width="100%" height="100%" viewBox="0 0 24 24" fill="#FBC04E" xmlns="http://www.w3.org/2000/svg">
                                 <polygon points="8,5 19,12 8,19" />
@@ -108,18 +128,20 @@ export default function VillageSection() {
                         <Image
                             src={card.img}
                             alt="Video Placeholder"
-                            className={`w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-300 ${hoveredIndex === index ? "opacity-0" : "opacity-100"
-                                }`}
+                            className={`w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-300 ${hoveredIndex === index ? "opacity-0" : "opacity-100"}`}
                         />
-                        <video
-                            src={card.vid}
-                            muted
-                            loop
-                            playsInline
-                            className={`w-full h-full object-cover transition-opacity duration-300 ${hoveredIndex === index ? "opacity-100" : "opacity-0"
-                                }`}
-                            autoPlay
-                        />
+                        {isSectionVisible && ( // Load videos only when the section is about to enter viewport
+                            <video
+                                data-index={index}
+                                src={card.vid}
+                                muted
+                                loop
+                                playsInline
+                                className={`lazy-video w-full h-full object-cover transition-opacity duration-300 ${hoveredIndex === index ? "opacity-100" : "opacity-0"}`}
+                                autoPlay
+                                preload="auto"
+                            />
+                        )}
                         <div className="w-full absolute bottom-0 left-0 z-10 text-white flex flex-col gap-1 p-4 bg-gradient-to-t from-black">
                             <b className="text-lg">{card.place}</b>
                             <p className="text-xs md:test-md text-gray-300 md:text-gray-200">{card.desc}</p>
