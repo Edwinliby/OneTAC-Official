@@ -69,12 +69,12 @@ export default function App() {
                     ))
                 }
 
-                <div className="custom-next-button absolute z-10 right-0 top-1/2 transform -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 bg-white rounded-full shadow-lg flex items-center justify-center cursor-pointer">
+                <div className="custom-next-button absolute z-10 right-0 top-[40%] transform -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 bg-white rounded-full shadow-lg flex items-center justify-center cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-700">
                         <path d="M9 18l6-6-6-6" />
                     </svg>
                 </div>
-                <div className={`custom-prev-button absolute z-10 left-0 top-1/2 transform -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 bg-white rounded-full shadow-lg flex items-center justify-center cursor-pointer transition-opacity duration-500`}>
+                <div className={`custom-prev-button absolute z-10 left-0 top-[40%] transform -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 bg-white rounded-full shadow-lg flex items-center justify-center cursor-pointer transition-opacity duration-500`}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-700">
                         <path d="M15 18l-6-6 6-6" />
                     </svg>

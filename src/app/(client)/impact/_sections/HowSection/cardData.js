@@ -1,9 +1,9 @@
-import t1 from "../../../../../../public/assets/impact/t1.webp";
-import t2 from "../../../../../../public/assets/impact/t2.webp";
-import t3 from "../../../../../../public/assets/impact/t3.webp";
-import t4 from "../../../../../../public/assets/impact/t4.webp";
-import t5 from "../../../../../../public/assets/impact/t5.webp";
-import t6 from "../../../../../../public/assets/impact/t6.webp";
+import t1 from "@/../public/assets/impact/t1.webp";
+import t2 from "@/../public/assets/impact/t2.webp";
+import t3 from "@/../public/assets/impact/t3.webp";
+import t4 from "@/../public/assets/impact/t4.webp";
+import t5 from "@/../public/assets/impact/t5.webp";
+import t6 from "@/../public/assets/impact/t6.webp";
 
 export const data = [
   {

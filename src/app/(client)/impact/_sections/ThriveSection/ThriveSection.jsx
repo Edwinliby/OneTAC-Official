@@ -3,9 +3,9 @@
 import { useState, useRef } from "react";
 import Image from "next/image";
 import HeaderText from "@/Components/HeaderText/HeaderText";
-import th1 from "../../../../../../public/assets/impact/th1.webp";
-import th2 from "../../../../../../public/assets/impact/th2.webp";
-import logo from "../../../../../../public/assets/logo_white.webp";
+import th1 from "@/../public/assets/impact/th1.webp";
+import th2 from "@/../public/assets/impact/th2.webp";
+import logo from "@/../public/assets/logo_white.webp";
 
 export default function ImageComparisonSlider() {
     const [sliderPosition, setSliderPosition] = useState(50);

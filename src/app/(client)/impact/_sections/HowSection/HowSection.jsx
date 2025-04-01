@@ -1,7 +1,7 @@
 import HeaderText from "@/Components/HeaderText/HeaderText"
 import Card from "./card"
 import Image from "next/image"
-import Vector from '../../../../../../public/assets/impact/Vector.svg'
+import Vector from '@/../public/assets/impact/Vector.svg'
 import { data } from "./cardData"
 
 export default function HowSection() {
