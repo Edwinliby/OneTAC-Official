@@ -129,6 +129,7 @@ export default function Navbar() {
                 <div className="flex items-center justify-start relative z-50">
                     <button
                         onClick={toggleNavbar}
+                        aria-label="Toggle menu"
                         className={`
                             ${"flex flex-col cursor-pointer w-12 h-12 items-center justify-center space-y-1.5 2xl:space-y-2 group focus:outline-none relative z-50"}
                             ${isOpen ? "md:translate-x-8 rounded-4xl shadow" : ""}

@@ -9,7 +9,7 @@ const Newsletter = () => {
 
     return (
         <div className="flex flex-col gap-4 md:items-end w-full md:w-fit">
-            <h4 className="text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl font-semibold">Subscribe to Our Newsletter</h4>
+            <b className="text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl font-semibold">Subscribe to Our Newsletter</b>
             <div className="flex gap-2 font-medium w-full ">
                 <span className="relative w-full">
                     {!isFocused && email.trim() === "" && (
