@@ -1,10 +1,10 @@
 import Img from '../../../../public/assets/26.webp'
 import Head from "@/Components/Head/Head";
-import WhatSection from './_Sections/WhatSection/WhatSection';
-import GridSection from './_Sections/GridSection/GridSection';
-import BentoSection from './_Sections/BentoSection/BentoSection';
-import ActionSection from './_Sections/ActionSection/ActionSection';
-import DownloadSection from './_Sections/DownloadSection/DownloadSection';
+import WhatSection from './_sections/WhatSection/WhatSection';
+import GridSection from './_sections/GridSection/GridSection';
+import BentoSection from './_sections/BentoSection/BentoSection';
+import ActionSection from './_sections/ActionSection/ActionSection';
+import DownloadSection from './_sections/DownloadSection/DownloadSection';
 
 export default function page() {
     return (
