@@ -56,7 +56,7 @@ export default function Footer() {
                 <div className="flex flex-col md:items-end gap-2">
                     <p className="text-gray-400 text-sm">Contact at:</p>
                     <Link
-                        href='mailto:#'
+                        href='mailto:info@onetac.org'
                         className="text-xl flex items-center gap-2"
                     >
                         info@onetac.org <MoveUpRight />

@@ -16,7 +16,7 @@ export const cardData = [
     img: karnataka,
     vid: "/videos/karnataka.webm",
     place: "Karnataka",
-    desc: "Explore Gokarna’s serene beaches and ancient heritage ruins.",
+    desc: "Explore Gokarna's serene beaches and ancient heritage ruins.",
   },
   {
     img: Up,

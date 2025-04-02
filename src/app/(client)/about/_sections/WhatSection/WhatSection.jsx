@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef } from "react";
-import { Sparkle, Volume2, VolumeOff } from "lucide-react";
+import { Sparkle, Volume2, VolumeOff, Play, Pause, SkipBack, SkipForward } from "lucide-react";
 import HeaderText from "@/Components/HeaderText/HeaderText";
 import DescriptionText from "@/Components/DescriptionText/DescriptionText";
 
@@ -20,6 +20,7 @@ export default function WhatSection() {
     const [isMuted, setIsMuted] = useState(true);
     const [volume, setVolume] = useState(0.25);
     const [showSlider, setShowSlider] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(true);
     const videoRef = useRef(null);
 
     const toggleMute = () => {
@@ -38,6 +39,29 @@ export default function WhatSection() {
         setVolume(newVolume);
         if (videoRef.current) {
             videoRef.current.volume = newVolume;
+        }
+    };
+
+    const togglePlayPause = () => {
+        if (videoRef.current) {
+            if (isPlaying) {
+                videoRef.current.pause();
+            } else {
+                videoRef.current.play();
+            }
+            setIsPlaying((prev) => !prev);
+        }
+    };
+
+    const skipBackward = () => {
+        if (videoRef.current) {
+            videoRef.current.currentTime -= 10;
+        }
+    };
+
+    const skipForward = () => {
+        if (videoRef.current) {
+            videoRef.current.currentTime += 10;
         }
     };
 
@@ -69,8 +93,17 @@ export default function WhatSection() {
                     muted={isMuted}
                     className="w-full h-full object-cover"
                 />
-                {/* Volume Controller */}
+                {/* Custom Controls */}
                 <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 flex items-center gap-2 text-white font-bold bg-black/50 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-full">
+                    <button onClick={skipBackward}>
+                        <SkipBack size={15} />
+                    </button>
+                    <button onClick={togglePlayPause}>
+                        {isPlaying ? <Pause size={15} /> : <Play size={15} />}
+                    </button>
+                    <button onClick={skipForward}>
+                        <SkipForward size={15} />
+                    </button>
                     <button onClick={toggleMute}>
                         {isMuted ? <VolumeOff size={15} /> : <Volume2 size={15} />}
                     </button>

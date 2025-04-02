@@ -10,7 +10,7 @@ import eleven from "../../../../../../public/assets/11.webp";
 import twelve from "../../../../../../public/assets/12.webp";
 import fourteen from "../../../../../../public/assets/14.webp";
 import sixteen from "../../../../../../public/assets/16.webp";
-import seventeen from "../../../../../../public/assets/17.webp";
+import seventeen from "../../../../../../public/assets/20.webp";
 
 import p1 from "../../../../../../public/partners/p1.webp";
 import p2 from "../../../../../../public/partners/p2.webp";

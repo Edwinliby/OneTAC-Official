@@ -84,7 +84,7 @@ export default function Navbar() {
                     draggable={false}
                     width={100}
                     height={100}
-                    className={`w-[6rem] h-[3.5rem] 2xl:h-[4.5rem] ${isOutsideHero ? 'hidden' : 'block'}`}
+                    className={`w-[6rem] h-[3.5rem] 2xl:h-[4.5rem] object-contain ${isOutsideHero ? 'hidden' : 'block'}`}
                 />
                 <Image
                     src={ColorLogo}
@@ -92,7 +92,7 @@ export default function Navbar() {
                     draggable={false}
                     width={100}
                     height={100}
-                    className={`w-[6rem] h-[3.5rem] 2xl:h-[4.5rem] ${isOutsideHero ? 'block' : 'hidden'}`}
+                    className={`w-[6rem] h-[3.5rem] 2xl:h-[4.5rem] object-contain ${isOutsideHero ? 'block' : 'hidden'}`}
                 />
             </Link>
 

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { cardData } from "./data";
 import DescriptionText from "@/Components/DescriptionText/DescriptionText";
+import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 
 export default function VillageSection() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -55,6 +56,18 @@ export default function VillageSection() {
         scrollRef.current.scrollLeft = scrollLeft.current - walk;
     };
 
+    const scrollLeftHandler = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+        }
+    };
+
+    const scrollRightHandler = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+        }
+    };
+
     return (
         <motion.div
             ref={sectionRef}
@@ -64,7 +77,7 @@ export default function VillageSection() {
             viewport={{ once: true }}
             className="flex flex-col gap-10 md:gap-16 px-4 py-10 lg:py-24 md:p-8 lg:p-16"
         >
-            <div>
+            <div className="relative">
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -84,6 +97,11 @@ export default function VillageSection() {
                         content={"From snow-capped peaks to vibrant festivals, India’s cultural wealth is unmatched, offering a rich tapestry of traditions, art, and heritage that stretches across centuries. Despite this, India’s cultural influence remains underutilized due to fragmentation, unequal growth, and limited discoverability. By uniting the Tourism, Arts, and Culture (TAC) ecosystem through tech-driven solutions, India can unlock its true power and emerge as a global leader in immersive cultural experiences."}
                     />
                 </motion.div>
+
+                <div className="absolute right-0 -bottom-6 sm:-bottom-9 z-10 flex items-center gap-4 md:gap-6 text-[var(--brown)] text-4xl md:text-5xl">
+                    <HiArrowLongLeft className="active:text-[var(--orange)] hover:text-[var(--orange)] cursor-pointer" onClick={scrollLeftHandler} />
+                    <HiArrowLongRight className="active:text-[var(--orange)] hover:text-[var(--orange)] cursor-pointer" onClick={scrollRightHandler} />
+                </div>
             </div>
 
             {/* Scrollable Cards */}

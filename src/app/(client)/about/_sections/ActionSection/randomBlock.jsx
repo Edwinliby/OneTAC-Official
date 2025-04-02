@@ -74,7 +74,7 @@ export default function RandomBlock() {
                     i === randomIndex ? { ...block, content: newContent } : block
                 );
             });
-        }, 1800); // Update every 1.8 seconds
+        }, 1000); // Update every 1 seconds
 
         return () => clearInterval(intervalRef.current);
     }, [dataSet, getUniqueContent, blocks]);
