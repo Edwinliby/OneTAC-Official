@@ -31,7 +31,7 @@ export default function BentoSection() {
             <HeaderText text="The Market Opportunity" className={'2xl:mb-6'} />
 
             <motion.div
-                className="grid grid-cols-1 xl:grid-cols-2 gap-4 w-full mx-auto auto-rows-fr"
+                className="grid grid-cols-1 xl:grid-cols-2 gap-4 w-full mx-auto sm:auto-rows-fr"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -45,14 +45,14 @@ export default function BentoSection() {
                     </motion.div>
 
                     <motion.div className="group overflow-hidden w-full h-full flex flex-col justify-between bg-white rounded-2xl shadow-md" variants={itemVariants}>
-                        <p className="absolute sm:relative font-bold text-2xl p-6 py-6 sm:p-8 sm:py-10">Market size and <b className="text-[var(--brown)]">projections</b></p>
+                        <p className="absolute sm:relative font-bold text-2xl py-6 p-8 sm:py-10">Market size and <b className="text-[var(--brown)]">projections</b></p>
                         <Image
                             src={two}
                             alt="bento images"
                             draggable={false}
                             width={600}
                             height={600}
-                            className="w-full h-fit object-contain pt-6 sm:pt-0 px-6 group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
+                            className="w-full h-fit object-contain pt-18 sm:pt-0 px-6 group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                         />
                     </motion.div>
 
@@ -92,8 +92,8 @@ export default function BentoSection() {
                 </motion.div>
 
                 {/* Right Grid */}
-                <motion.div className="col-span-1 row-span-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="col-span-1 row-span-2 grid grid-cols-1 gap-4">
+                <motion.div className="sm:col-span-1 sm:row-span-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="sm:col-span-1 sm:row-span-2 grid grid-cols-1 gap-4">
                         <motion.div className="w-full h-fit sm:h-full flex flex-col gap-6 sm:gap-0 group justify-between overflow-hidden bg-white rounded-2xl shadow-md px-6 sm:px-8 pt-10" variants={itemVariants}>
                             <div>
                                 <p className="text-4xl mb-6">For <b className="text-[var(--brown)]">Startups</b></p>
@@ -120,7 +120,7 @@ export default function BentoSection() {
                         </motion.div>
                     </div>
 
-                    <div className="col-span-1 row-span-2 grid grid-cols-1 gap-4">
+                    <div className="sm:col-span-1 sm:row-span-2 grid grid-cols-1 gap-4">
                         <motion.div className="hidden sm:flex items-center justify-center group w-full h-full overflow-hidden shadow-md bg-white rounded-2xl" variants={itemVariants}>
                             <Image
                                 src={five}
