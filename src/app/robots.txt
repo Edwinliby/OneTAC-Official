@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /privacy-policy
+
+Sitemap: https://onetac.org/sitemap.xml

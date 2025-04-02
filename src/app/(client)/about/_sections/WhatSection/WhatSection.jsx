@@ -1,27 +1,46 @@
-import { Sparkle } from "lucide-react"
+'use client'
+
+import { useState, useRef } from "react";
+import { Sparkle, Volume2, VolumeOff } from "lucide-react";
 import HeaderText from "@/Components/HeaderText/HeaderText";
 import DescriptionText from "@/Components/DescriptionText/DescriptionText";
 
 const keyData = [
-    {
-        text: "Public value over private ownership",
-    },
-    {
-        text: "Community based co-creation",
-    },
-    {
-        text: "Open-source",
-    },
-    {
-        text: "DPI-first, citizen-first design",
-    },
-]
+    "Public value over private ownership",
+    "Community-based co-creation",
+    "Open-source",
+    "DPI-first, citizen-first design",
+];
 
 const content = `OneTAC is India's decentralized digital infrastructure for tourism, arts, and culture—an open network that seamlessly connects travelers with authentic local experiences across the country.
 
 Built on the Beckn Protocol and interoperable frameworks, OneTAC unifies India's diverse cultural offerings and hidden gems—heritage walks, folk performances, artisan workshops—making them easily discoverable and bookable across platforms. Imagine unlocking this untapped potential, equitably.`;
 
 export default function WhatSection() {
+    const [isMuted, setIsMuted] = useState(true);
+    const [volume, setVolume] = useState(0.25);
+    const [showSlider, setShowSlider] = useState(false);
+    const videoRef = useRef(null);
+
+    const toggleMute = () => {
+        setIsMuted((prev) => !prev);
+        setShowSlider((prev) => !prev);
+        if (videoRef.current) {
+            videoRef.current.muted = !isMuted;
+            if (!isMuted) {
+                videoRef.current.volume = volume;
+            }
+        }
+    };
+
+    const handleVolumeChange = (e) => {
+        const newVolume = parseFloat(e.target.value);
+        setVolume(newVolume);
+        if (videoRef.current) {
+            videoRef.current.volume = newVolume;
+        }
+    };
+
     return (
         <div id='aboutOneTAC' className="px-4 py-10 md:p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-2 items-center md:mt-8 gap-8 lg:gap-16">
             <div className="flex flex-col gap-6 md:gap-8">
@@ -33,21 +52,43 @@ export default function WhatSection() {
                         keyData.map((item, index) => (
                             <p className="group flex items-start md:items-center gap-3 text-sm md:text-md xl:text-xl 3xl:text-2xl" key={index}>
                                 <Sparkle size={15} className="bg-[var(--orange)] text-white w-6 h-6 p-1 rounded-4xl group-active:rotate-180 group-hover:rotate-180 transform duration-300" />
-                                {item.text}
+                                {item}
                             </p>
                         ))
                     }
                 </div>
             </div>
-            <div className="w-full h-full rounded-2xl overflow-hidden">
+            <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <video
-                    src='/videoBg.webm'
+                    ref={videoRef}
+                    src='/aboutVid.webm'
                     autoPlay
-                    muted
                     loop
                     playsInline
+                    poster="/assets/aboutBg.webp"
+                    muted={isMuted}
                     className="w-full h-full object-cover"
                 />
+                {/* Volume Controller */}
+                <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 flex items-center gap-2 text-white font-bold bg-black/50 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-full">
+                    <button onClick={toggleMute}>
+                        {isMuted ? <VolumeOff size={15} /> : <Volume2 size={15} />}
+                    </button>
+                    {showSlider && (
+                        <input
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value={volume}
+                            onChange={handleVolumeChange}
+                            className="w-24 h-1 cursor-pointer appearance-none bg-amber-100 rounded-full"
+                            style={{
+                                accentColor: 'orange'
+                            }}
+                        />
+                    )}
+                </div>
             </div>
         </div>
     )
