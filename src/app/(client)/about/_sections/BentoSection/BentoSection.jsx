@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import HeaderText from "@/components/HeaderText/HeaderText";
+import HeaderText from "../../../../../components/HeaderText/HeaderText";
 import { motion } from "framer-motion";
 import one from "@/../public/assets/bento/1.webp";
 import two from "@/../public/assets/bento/2.webp";
