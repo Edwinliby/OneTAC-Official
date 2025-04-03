@@ -1,4 +1,4 @@
-import HeaderText from "@/components/HeaderText/HeaderText"
+import HeaderText from "@/components/Header/HeaderText"
 import Card from "./card"
 import Image from "next/image"
 import Vector from '@/../public/assets/impact/Vector.svg'

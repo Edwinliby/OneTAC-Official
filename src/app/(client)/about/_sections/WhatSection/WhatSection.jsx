@@ -2,8 +2,8 @@
 
 import { useState, useRef } from "react";
 import { Sparkle, Volume2, VolumeOff, Play, Pause, SkipBack, SkipForward } from "lucide-react";
-import HeaderText from "@/components/HeaderText/HeaderText";
-import DescriptionText from "@/components/DescriptionText/DescriptionText";
+import HeaderText from "@/components/Header/HeaderText";
+import DescriptionText from "@/components/Description/DescriptionText";
 
 const keyData = [
     "Public value over private ownership",

@@ -2,7 +2,7 @@ import Cubes from "./cube";
 import Image from "next/image";
 import { Sparkle } from "lucide-react"
 import BlockImg from '../../../../../../public/assets/bento/blocks.webp'
-import HeaderText from "@/components/HeaderText/HeaderText";
+import HeaderText from "@/components/Header/HeaderText";
 
 const gridLayer = [
     {
