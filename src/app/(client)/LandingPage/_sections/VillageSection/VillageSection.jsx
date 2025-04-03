@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cardData } from "./data";
-import DescriptionText from "@/components/Description/Description";
+import DescriptionText from "@/Components/Description/Description";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 
 export default function VillageSection() {

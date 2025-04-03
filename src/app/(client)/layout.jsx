@@ -1,6 +1,6 @@
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
-import ScrollEffect from "@/components/ScrollAnimation/Scroll";
+import Navbar from "@/Components/Navbar/Navbar";
+import Footer from "@/Components/Footer/Footer";
+import ScrollEffect from "@/Components/ScrollAnimation/Scroll";
 
 export default function Clientlayout({ children }) {
     return (

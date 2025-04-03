@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
-import HeaderText from "@/components/Header/Header";
+import HeaderText from "@/Components/Header/Header";
 import th1 from "@/../public/assets/impact/th1.webp";
 import th2 from "@/../public/assets/impact/th2.webp";
 import logo from "@/../public/assets/logo_white.webp";

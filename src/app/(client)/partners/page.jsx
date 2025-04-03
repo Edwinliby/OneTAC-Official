@@ -1,5 +1,5 @@
 import Img from '../../../../public/assets/34.webp'
-import Head from "@/components/Head/Head";
+import Head from "@/Components/Head/Head";
 import BeginSection from './_sections/BeginSection/BeginSection';
 import CollabSection from './_sections/CollabSection/CollabSection';
 import JoinSection from './_sections/JoinSection/JoinSection';

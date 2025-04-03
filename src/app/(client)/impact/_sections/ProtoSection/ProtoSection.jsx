@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import ProtoImg from '@/../public/assets/impact/prototype.webp'
-import HeaderText from "@/components/Header/Header"
-import DescriptionText from "@/components/Description/Description"
+import HeaderText from "@/Components/Header/Header"
+import DescriptionText from "@/Components/Description/Description"
 
 const HeaderContext = `See It in Action:\n Explore the Prototype`
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from "framer-motion";
-import HeaderText from "@/components/Header/Header";
+import HeaderText from "@/Components/Header/Header";
 import Image from "next/image";
 import s1 from '@/../public/assets/impact/s1.webp';
 import s2 from '@/../public/assets/impact/s2.webp';

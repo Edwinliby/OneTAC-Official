@@ -7,7 +7,7 @@ import Link from "next/link";
 import slide1 from "../../../../../../public/assets/slide_1.webp";
 import slide2 from "../../../../../../public/assets/slide_2.webp";
 import Marquee from "react-fast-marquee";
-import DescriptionText from "@/components/Description/Description";
+import DescriptionText from "@/Components/Description/Description";
 
 const stats = [
     { label: "Livelihoods empowered by 2035.", value: "200M", span: "+" },
