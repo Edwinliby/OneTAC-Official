@@ -6,8 +6,8 @@ import { Sparkle } from "lucide-react"
 import { motion } from "framer-motion";
 import Img1 from '../../../../../../public/assets/1.webp'
 import Img2 from '../../../../../../public/assets/16.webp'
-import HeaderText from "@/components/Header/HeaderText";
-import DescriptionText from "@/components/Description/DescriptionText";
+import HeaderText from "@/components/Header/Header";
+import DescriptionText from "@/components/Description/Description";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
