@@ -2,8 +2,8 @@
 
 import { useState, useRef } from "react";
 import { Sparkle, Volume2, VolumeOff, Play, Pause, SkipBack, SkipForward } from "lucide-react";
-import HeaderText from "@/Components/HeaderText/HeaderText";
-import DescriptionText from "@/Components/DescriptionText/DescriptionText";
+import HeaderText from "@/components/HeaderText/HeaderText";
+import DescriptionText from "@/components/DescriptionText/DescriptionText";
 
 const keyData = [
     "Public value over private ownership",
@@ -94,17 +94,17 @@ export default function WhatSection() {
                     className="w-full h-full object-cover"
                 />
                 {/* Custom Controls */}
-                <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 flex items-center gap-2 text-white font-bold bg-black/50 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-full">
-                    <button onClick={skipBackward}>
+                <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 flex items-center gap-4 text-white font-bold bg-black/50 backdrop-blur-sm px-2.5 sm:px-4 py-1 sm:py-2 rounded-full">
+                    <button onClick={skipBackward} aria-label="Skip Backward">
                         <SkipBack size={15} />
                     </button>
-                    <button onClick={togglePlayPause}>
+                    <button onClick={togglePlayPause} aria-label={isPlaying ? "Pause" : "Play"}>
                         {isPlaying ? <Pause size={15} /> : <Play size={15} />}
                     </button>
-                    <button onClick={skipForward}>
+                    <button onClick={skipForward} aria-label="Skip Forward">
                         <SkipForward size={15} />
                     </button>
-                    <button onClick={toggleMute}>
+                    <button onClick={toggleMute} aria-label={isMuted ? "Unmute" : "Mute"}>
                         {isMuted ? <VolumeOff size={15} /> : <Volume2 size={15} />}
                     </button>
                     {showSlider && (

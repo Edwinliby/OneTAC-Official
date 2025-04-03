@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cardData } from "./data";
-import DescriptionText from "@/Components/DescriptionText/DescriptionText";
+import DescriptionText from "@/components/DescriptionText/DescriptionText";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 
 export default function VillageSection() {
@@ -98,10 +98,14 @@ export default function VillageSection() {
                     />
                 </motion.div>
 
-                <div className="absolute right-0 -bottom-6 sm:-bottom-9 z-10 flex items-center gap-4 md:gap-6 text-[var(--brown)] text-4xl md:text-5xl">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+                    className="absolute right-0 -bottom-6 sm:-bottom-9 z-10 flex items-center gap-4 md:gap-6 text-[var(--brown)] text-4xl md:text-5xl">
                     <HiArrowLongLeft className="active:text-[var(--orange)] hover:text-[var(--orange)] cursor-pointer" onClick={scrollLeftHandler} />
                     <HiArrowLongRight className="active:text-[var(--orange)] hover:text-[var(--orange)] cursor-pointer" onClick={scrollRightHandler} />
-                </div>
+                </motion.div>
             </div>
 
             {/* Scrollable Cards */}
@@ -130,6 +134,7 @@ export default function VillageSection() {
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
                         <button
+                            aria-label="play video"
                             className={`z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-12 h-12 backdrop-blur-sm bg-amber-50/10 border-2 border-[var(--orange)] rounded-full
                                 ${hoveredIndex === index ? "opacity-0" : "opacity-100"}`}
                         >

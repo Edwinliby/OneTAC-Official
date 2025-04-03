@@ -7,8 +7,9 @@ export default function Head({ img, title, subTitle, className }) {
             <Image
                 src={img}
                 alt="hero image"
+                loading="eager"
                 draggable={false}
-                width={800}
+                width={1500}
                 height={800}
                 className={`w-full h-full object-cover object-bottom ${className || ""}`}
             />

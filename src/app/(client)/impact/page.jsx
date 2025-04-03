@@ -1,5 +1,5 @@
 import Img from '../../../../public/assets/32.webp'
-import Head from "@/Components/Head/Head";
+import Head from "@/components/Head/Head";
 import HowSection from './_sections/HowSection/HowSection';
 import ThriveSection from './_sections/ThriveSection/ThriveSection';
 import ScaleSection from './_sections/ScaleSection/ScaleSection';

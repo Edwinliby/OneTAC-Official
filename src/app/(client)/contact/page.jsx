@@ -1,5 +1,5 @@
 import Img from '../../../../public/assets/11.webp'
-import Head from "@/Components/Head/Head";
+import Head from "@/components/Head/Head";
 import Form from './form';
 
 export const metadata = {

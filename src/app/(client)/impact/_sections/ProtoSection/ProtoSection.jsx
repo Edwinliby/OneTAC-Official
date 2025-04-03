@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import ProtoImg from '@/../public/assets/impact/prototype.webp'
-import HeaderText from "@/Components/HeaderText/HeaderText"
-import DescriptionText from "@/Components/DescriptionText/DescriptionText"
+import HeaderText from "@/components/HeaderText/HeaderText"
+import DescriptionText from "@/components/DescriptionText/DescriptionText"
 
 const HeaderContext = `See It in Action:\n Explore the Prototype`
 
@@ -16,7 +16,8 @@ export default function ProtoSection() {
 
                     <div className="flex flex-col sm:flex-row xl:flex-col gap-4">
                         <Link
-                            href='/'
+                            href='#'
+                            aria-label="View Traveller Prototype"
                             className={`
                         w-fit z-10 bg-[var(--light-Orange)] border border-white text-base 2xl:text-xl text-[var(--brown)]
                         font-semibold py-2 px-6 xl:px-8 rounded-lg cursor-pointer transition duration-300 shadow-lg
@@ -26,7 +27,8 @@ export default function ProtoSection() {
                             View Traveller Prototype
                         </Link>
                         <Link
-                            href='/'
+                            href='#'
+                            aria-label="View Practitioner Prototype"
                             className={`
                         w-fit z-10 bg-[var(--light-Orange)] border border-white text-base 2xl:text-xl text-[var(--brown)]
                         font-semibold py-2 px-6 xl:px-8 rounded-lg cursor-pointer transition duration-300 shadow-lg

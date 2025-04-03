@@ -7,7 +7,7 @@ import Link from "next/link";
 import slide1 from "../../../../../../public/assets/slide_1.webp";
 import slide2 from "../../../../../../public/assets/slide_2.webp";
 import Marquee from "react-fast-marquee";
-import DescriptionText from "@/Components/DescriptionText/DescriptionText";
+import DescriptionText from "@/components/DescriptionText/DescriptionText";
 
 const stats = [
     { label: "Livelihoods empowered by 2035.", value: "200M", span: "+" },
@@ -102,8 +102,8 @@ export default function Home() {
                                     src={item.img1}
                                     alt="image"
                                     draggable={false}
-                                    width={800}
-                                    height={800}
+                                    width={2000}
+                                    height={2000}
                                     className="w-full md:h-[30rem] xl:h-[40rem] object-cover opacity-50"
                                 />
                             </motion.div>
@@ -122,7 +122,7 @@ export default function Home() {
                         hover:-translate-y-2 hover:border-[var(--light-Orange)] hover:shadow-2xl hover:bg-amber-200
                     `}
                 >
-                    <Link href='/contact'>Join the movement</Link>
+                    <Link href='/contact' aria-label="join the movement">Join the movement</Link>
                 </motion.div>
             </motion.section>
         </div>

@@ -61,7 +61,7 @@ const Newsletter = () => {
                             }
                         })}
                         placeholder="Enter your mail address"
-                        className="w-full lg:px-4 py-3 2xl:py-4 text-sm 2xl:text-base rounded-md bg-white text-gray-800 border-none focus:outline-none focus:ring-0"
+                        className="w-full px-4 py-3 2xl:py-4 text-sm 2xl:text-base rounded-md bg-white text-gray-800 border-none focus:outline-none focus:ring-0"
 
                     />
                     {errors.email && (

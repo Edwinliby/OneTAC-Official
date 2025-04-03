@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from "framer-motion";
-import HeaderText from "@/Components/HeaderText/HeaderText";
-import DescriptionText from "@/Components/DescriptionText/DescriptionText";
+import HeaderText from "@/components/HeaderText/HeaderText";
+import DescriptionText from "@/components/DescriptionText/DescriptionText";
 
 const currentVideo = "_f6XPlUkWDc";
 

@@ -20,10 +20,10 @@ export default function DownloadSection() {
                         Want to know more? Dive <br />
                         deeper into <span className='text-[var(--orange)]'>OneTAC</span>
                     </h2>
-                    <Link href={brochureUrl} rel='noopener noreferrer' className='font-semibold border-2 border-[var(--brown)]/40 px-6 py-2 w-fit rounded-full text-[var(--brown)] transition duration-300 hover:shadow-lg'>Download Now</Link>
+                    <Link href={brochureUrl} aria-label='Download Now' rel='noopener noreferrer' className='font-semibold border-2 border-[var(--brown)]/40 px-6 py-2 w-fit rounded-full text-[var(--brown)] transition duration-300 hover:shadow-lg'>Download Now</Link>
                 </div>
                 <div className='sm:w-3/4 flex justify-center group'>
-                    <Link href={brochureUrl} rel='noopener noreferrer' className='p-4 sm:p-0'>
+                    <Link href={brochureUrl} rel='noopener noreferrer' className='p-4 sm:p-0' aria-label='Brochure'>
                         <Image
                             src={Brochure}
                             alt="Brochure Image"

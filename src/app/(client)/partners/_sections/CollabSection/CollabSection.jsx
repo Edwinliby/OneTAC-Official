@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import HeaderText from "@/Components/HeaderText/HeaderText";
+import HeaderText from "@/components/HeaderText/HeaderText";
 import Image from "next/image";
 import { imgData } from "./imgData";
 

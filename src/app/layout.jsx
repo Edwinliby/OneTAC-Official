@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta property="og:title" content="One TAC | Tourism, Art and Culture" />
         <meta property="og:description" content="Partner with Volshauz for expert web development, branding, UI/UX design, and marketing solutions. Empower your brand’s online presence with tailored strategies to boost engagement and growth." />
-        {/* <meta property="og:image" content="https://onetac.org/_next/image?url=%2Fassets%2Fl1.webp&w=256&q=75" /> */}
+        <meta property="og:image" content="https://onetac.org/icon0.svg" />
         <meta property="og:url" content="https://onetac.org/" />
         <meta name="keywords" content={metadata.keywords.join(", ")} />
         <meta name="apple-mobile-web-app-title" content="OneTAC" />

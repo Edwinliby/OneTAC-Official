@@ -15,7 +15,7 @@ export default function ActionSection() {
                         hover:-translate-y-2 hover:border-[var(--light-Orange)] hover:shadow-2xl hover:bg-amber-200
                     `}
                     >
-                        <Link href='/impact'>Explore the opportunities</Link>
+                        <Link href='/impact' aria-label="explore the opportunities">Explore the opportunities</Link>
                     </div>
                     <div
                         className={`
@@ -24,7 +24,7 @@ export default function ActionSection() {
                         hover:-translate-y-2 hover:border-[var(--light-Orange)] hover:shadow-2xl hover:bg-amber-200
                     `}
                     >
-                        <Link href='https://southernchronicles.life/' rel="noopener noreferrer" target="_blank">Share your stories</Link>
+                        <Link href='https://southernchronicles.life/' aria-label="share your stories" rel="noopener noreferrer" target="_blank">Share your stories</Link>
                     </div>
                 </div>
             </div>

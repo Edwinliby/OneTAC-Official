@@ -6,8 +6,10 @@ import { Sparkle } from "lucide-react"
 import { motion } from "framer-motion";
 import Img1 from '../../../../../../public/assets/1.webp'
 import Img2 from '../../../../../../public/assets/16.webp'
-import HeaderText from "@/Components/HeaderText/HeaderText";
-import DescriptionText from "@/Components/DescriptionText/DescriptionText";
+import HeaderText from "@/components/HeaderText/HeaderText";
+import DescriptionText from "@/components/DescriptionText/DescriptionText";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const list = [
     "Tourism supports 70 million jobs, yet only drives 1.77% of India's GDP",
@@ -15,6 +17,29 @@ const list = [
 ]
 
 export default function AboutSection() {
+    const router = useRouter();
+
+    useEffect(() => {
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "OneTAC",
+            "url": "https://onetac.org/about",
+            "description": "OneTAC is a pan-India digital grid that seamlessly connects tourism, arts, and culture (TAC) — unlocking a UPI-like transformation for India's services economy.",
+            "logo": "https://onetac.org/icon0.svg",
+            "sameAs": [
+                "https://www.instagram.com/culkeyf/",
+                "https://www.linkedin.com/company/culkeyf/",
+                "https://x.com/culkeyF/"
+            ]
+        };
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.innerHTML = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+    }, [router.pathname]);
+
     return (
         <div className="flex flex-col md:flex-row gap-12 items-center px-4 py-10 lg:py-24 md:p-8 lg:p-16">
             <motion.div
@@ -57,7 +82,7 @@ export default function AboutSection() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.5 }}
             >
-                <p className="relative w-fit font-medium  lg:text-xl">
+                <p className="relative w-fit font-medium lg:text-xl">
                     What is OneTAC
                     <span className="absolute left-1 -bottom-[.005rem] rounded-2xl w-full h-2 -z-10 bg-amber-200"></span>
                 </p>
@@ -74,7 +99,7 @@ export default function AboutSection() {
                     }
                 </ul>
                 <DescriptionText content={`Imagine unlocking this untapped potential, equitably.`} />
-                <Link href='/about'
+                <Link href='/about' aria-label="know more"
                     className="flex items-center gap-2 shadow-xl w-fit bg-[var(--light-Orange)] text-[var(--brown)] font-semibold rounded-md px-6 py-3 hover:-translate-y-1 transition-all duration-200"
                 >Know more</Link>
             </motion.div>

@@ -49,7 +49,7 @@ export default function App() {
                 {
                     mediaData.map((item, key) => (
                         <SwiperSlide key={key}>
-                            <Link href={item.link} target="_blank" rel='noreferrer'>
+                            <Link href={item.link} target="_blank" rel='noreferrer' aria-label="media link">
                                 <div className='group flex flex-col gap-2 lg:gap-3'>
                                     <div className="h-[15rem] xl:h-[18rem] overflow-hidden rounded-2xl">
                                         <Image

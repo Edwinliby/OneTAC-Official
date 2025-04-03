@@ -4,7 +4,7 @@ import { MoveUpRight } from "lucide-react"
 import Newsletter from "./NewsLetter";
 import ScrollTop from "./scrollTop";
 import Logo from '@/../public/assets/footer_img/logo.svg';
-import { FaFacebookF, FaXTwitter, FaYoutube, FaLinkedin} from "react-icons/fa6";
+import { FaFacebookF, FaXTwitter, FaYoutube, FaLinkedin } from "react-icons/fa6";
 
 const socialLinks = [
     {
@@ -56,6 +56,7 @@ export default function Footer() {
                 <div className="flex flex-col md:items-end gap-2">
                     <p className="text-gray-400 text-sm">Contact at:</p>
                     <Link
+                        aria-label="mail link"
                         href='mailto:info@onetac.org'
                         className="text-xl flex items-center gap-2"
                     >
@@ -66,6 +67,7 @@ export default function Footer() {
                     {
                         navLinks.map((item) => (
                             <Link
+                                aria-label={item.name}
                                 key={item.name} href={item.link}
                                 className="transition-all hover:-translate-y-1 hover:text-[var(--brown)]"
                             >
@@ -83,6 +85,7 @@ export default function Footer() {
                         <Image
                             src={Logo}
                             alt="Logo"
+                            draggable={false}
                             width={500}
                             height={500}
                             className="w-full h-full object-contain"
@@ -92,7 +95,7 @@ export default function Footer() {
                 <div className="group flex items-center gap-4 md:gap-6">
                     {
                         socialLinks.map((link) => (
-                            <Link key={link.link} href={link.link} target="_blank" rel="noopener noreferrer"
+                            <Link key={link.link} href={link.link} target="_blank" rel="noopener noreferrer" aria-label="social link"
                                 className="transition-all group-active:scale-110 hover:scale-110 text-[var(--brown)] border border-[var(--brown)] p-3 rounded-full"
                             >
                                 {link.icon}

@@ -1,5 +1,5 @@
 import Img from '../../../../public/assets/26.webp'
-import Head from "@/Components/Head/Head";
+import Head from "@/components/Head/Head";
 import WhatSection from './_sections/WhatSection/WhatSection';
 import GridSection from './_sections/GridSection/GridSection';
 import BentoSection from './_sections/BentoSection/BentoSection';

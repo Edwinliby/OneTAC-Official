@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import HeaderText from "@/Components/HeaderText/HeaderText";
+import HeaderText from "@/components/HeaderText/HeaderText";
 import { motion } from "framer-motion";
 import one from "@/../public/assets/bento/1.webp";
 import two from "@/../public/assets/bento/2.webp";
@@ -50,7 +50,7 @@ export default function BentoSection() {
                             src={two}
                             alt="bento images"
                             draggable={false}
-                            width={600}
+                            width={1000}
                             height={600}
                             className="w-full h-fit object-contain pt-18 sm:pt-0 px-6 group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                         />
@@ -63,7 +63,7 @@ export default function BentoSection() {
                             src={one}
                             alt="bento images"
                             draggable={false}
-                            width={600}
+                            width={1000}
                             height={600}
                             className="w-full h-fit object-contain relative -bottom-8 left-0 group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                         />
@@ -103,7 +103,7 @@ export default function BentoSection() {
                                 src={four}
                                 alt="bento images"
                                 draggable={false}
-                                width={600}
+                                width={1000}
                                 height={600}
                                 className="w-full h-fit object-contain group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                             />
@@ -113,7 +113,7 @@ export default function BentoSection() {
                                 src={three}
                                 alt="bento images"
                                 draggable={false}
-                                width={600}
+                                width={1000}
                                 height={600}
                                 className="w-fit h-full object-cover group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                             />
@@ -126,7 +126,7 @@ export default function BentoSection() {
                                 src={five}
                                 alt="bento images"
                                 draggable={false}
-                                width={600}
+                                width={1000}
                                 height={600}
                                 className="w-full h-full object-cover group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                             />
@@ -144,7 +144,7 @@ export default function BentoSection() {
                             src={six}
                             alt="bento images"
                             draggable={false}
-                            width={600}
+                            width={1000}
                             height={600}
                             className="w-full h-fit object-cover relative -bottom-16 sm:bottom-0 group-active:scale-105 hover:scale-105 transition duration-500 ease-in-out"
                         />

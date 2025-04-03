@@ -84,7 +84,7 @@ export default function Navbar() {
                     draggable={false}
                     width={100}
                     height={100}
-                    className={`w-[6rem] h-[3.5rem] 2xl:h-[4.5rem] object-contain ${isOutsideHero ? 'hidden' : 'block'}`}
+                    className={`w-[6rem] h-[2.75rem] 2xl:h-[4.5rem] object-contain ${isOutsideHero ? 'hidden' : 'block'}`}
                 />
                 <Image
                     src={ColorLogo}
@@ -92,7 +92,7 @@ export default function Navbar() {
                     draggable={false}
                     width={100}
                     height={100}
-                    className={`w-[6rem] h-[3.5rem] 2xl:h-[4.5rem] object-contain ${isOutsideHero ? 'block' : 'hidden'}`}
+                    className={`w-[6rem] h-[2.75rem] 2xl:h-[4.5rem] object-contain ${isOutsideHero ? 'block' : 'hidden'}`}
                 />
             </Link>
 
@@ -101,6 +101,7 @@ export default function Navbar() {
                     <Link
                         href={item.link}
                         key={item.name}
+                        aria-label="links"
                         className={`font-medium hover:text-[var(--orange)] 2xl:text-xl
                                 ${isOutsideHero ? "text-black" : "text-white"}`}
                     >
@@ -112,6 +113,7 @@ export default function Navbar() {
             <div className="flex items-center gap-4">
                 <Link
                     href={navLinks[3].link}
+                    aria-label="links"
                     className={`
                         w-fit z-10 bg-[var(--light-Orange)] border border-white text-base 2xl:text-xl text-[var(--brown)]
                         font-semibold py-2 px-6 xl:px-8 rounded-lg cursor-pointer transition duration-300 shadow-lg
@@ -127,14 +129,14 @@ export default function Navbar() {
                         onClick={toggleNavbar}
                         aria-label="Toggle menu"
                         className={`
-                            ${"flex flex-col cursor-pointer w-12 h-12 items-center justify-center space-y-1.5 2xl:space-y-2 group focus:outline-none relative z-50"}
+                            ${"group flex flex-col cursor-pointer w-12 h-12 items-center justify-center space-y-1.5 2xl:space-y-2 group focus:outline-none relative z-50"}
                             ${isOpen ? "md:translate-x-8 rounded-4xl shadow" : ""}
                             `}
                     >
                         <span
                             className={`block h-0.5 2xl:h-1 w-6 2xl:w-8 transition-all duration-300 ease-in-out 
-                            ${isOutsideHero || isOpen ? "bg-black" : "bg-white"}
-                            ${isOpen ? 'rotate-45 translate-y-2' : ''}`}
+                            ${isOutsideHero || isOpen ? "bg-black hover:bg-[var(--brown)]" : "bg-white"}
+                            ${isOpen ? 'rotate-45 translate-y-2 rounded group-hover:bg-[var(--brown)]' : ''}`}
                         />
                         <span
                             className={`block h-0.5 2xl:h-1 w-4 2xl:w-6 transition-all duration-300 ease-in-out self-start translate-x-5 2xl:translate-x-4
@@ -143,8 +145,8 @@ export default function Navbar() {
                         />
                         <span
                             className={`block h-0.5 2xl:h-1 w-6 2xl:w-8 transition-all duration-300 ease-in-out 
-                            ${isOutsideHero || isOpen ? "bg-black" : "bg-white"}
-                            ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}
+                            ${isOutsideHero || isOpen ? "bg-black hover:bg-[var(--brown)]" : "bg-white"}
+                            ${isOpen ? '-rotate-45 -translate-y-2 rounded group-hover:bg-[var(--brown)]' : ''}`}
                         />
                     </button>
                 </div>
@@ -160,8 +162,9 @@ export default function Navbar() {
                                 <Link
                                     href={item.link}
                                     key={item.name}
+                                    aria-label="links"
                                     onClick={toggleNavbar}
-                                    className={`text-black flex items-center gap-1 font-medium hover:text-[var(--brown)] text-xl ${isActive ? "text-[var(--brown)]" : ""}`}
+                                    className={`text-black flex items-center gap-1 font-semibold hover:text-[var(--brown)] text-xl ${isActive ? "text-orange-900" : ""}`}
                                 >
                                     {isActive && <ArrowRight />} {item.name}
                                 </Link>
@@ -174,7 +177,8 @@ export default function Navbar() {
                                 <Link
                                     href={item.link}
                                     key={item.name}
-                                    className={`text-black w-fit font-medium hover:text-[var(--brown)]`}
+                                    aria-label="links"
+                                    className={`text-black w-fit font-medium hover:text-[var(--brown)] hover:-translate-y-2 transition duration-300 ease-in-out`}
                                 >
                                     {item.name}
                                 </Link>

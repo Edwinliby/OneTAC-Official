@@ -2,12 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-// import { Volume2, VolumeOff } from "lucide-react";
 
 const HeroBg = "https://beckn-ui-application.s3.ap-south-1.amazonaws.com/OneTac/videoBg.webm";
 
 export default function HeroSection() {
-    // const [isMuted, setIsMuted] = useState(true);
     const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0);
 
     const { scrollY } = useScroll();
@@ -58,9 +56,6 @@ export default function HeroSection() {
                 </motion.div>
 
                 <div className="w-full text-sm absolute bottom-6 md:bottom-10 px-4 md:px-8 xl:px-16 font-semibold flex items-center justify-between">
-                    {/* <button onClick={() => setIsMuted(!isMuted)} className="flex items-center gap-1.5">
-                        {isMuted ? <>Unmute <VolumeOff size={18} /></> : <>Mute <Volume2 size={18} /></>}
-                    </button> */}
                     <motion.p
                         key={languages[currentLanguageIndex]}
                         initial={{ opacity: 0, y: 10 }}

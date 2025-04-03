@@ -59,7 +59,7 @@ export default function JoinSection() {
                 </div>
             </div>
 
-            <Link href="/contact" className="w-fit absolute bottom-20 md:bottom-26 xl:bottom-36 text-center w-1/2 text-white bg-[var(--orange)] px-6 py-2 rounded-lg">Partner with us</Link>
+            <Link href="/contact" aria-label="partner with us" className="w-fit absolute bottom-20 md:bottom-26 xl:bottom-36 text-center w-1/2 text-white bg-[var(--orange)] px-6 py-2 rounded-lg">Partner with us</Link>
 
             <p className="absolute px-2 bottom-4 sm:bottom-7 text-center text-xs sm:text-base md:w-3/4 xl:w-1/2 2xl:w-[38%]">
                 Support the ONE TAC movement by contributing your time, resources, skills,

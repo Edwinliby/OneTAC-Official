@@ -109,7 +109,7 @@ export default function Form() {
                         <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700">Phone Number</label>
                         <div className="flex mt-1.5">
                             <select
-                                id="countryCode"
+                                id="phoneNumber"
                                 defaultValue="+91"
                                 className="block px-3 py-3 bg-white border border-amber-200 rounded-l-md focus:ring-yellow-500 focus:border-yellow-500"
                             >
@@ -259,7 +259,7 @@ export default function Form() {
                     <div className="ml-3 text-sm">
                         <label htmlFor="privacy-policy" className="font-medium text-gray-700">
                             You agree to our friendly {" "}
-                            <Link href="/privacy-policy" target='_blank' className="underline hover:text-[var(--brown)]">privacy policy</Link>
+                            <Link href="/privacy-policy" target='_blank' aria-label='privacy policy' className="underline hover:text-[var(--brown)]">privacy policy</Link>
                         </label>
                         {errors.privacyPolicy && (
                             <p className="text-red-500 text-xs mt-1">{errors.privacyPolicy.message}</p>
@@ -270,6 +270,7 @@ export default function Form() {
                 {/* Submit Button */}
                 <button
                     type="submit"
+                    aria-label='submit button'
                     disabled={isSubmitting}
                     className={`w-full md:w-fit flex justify-center px-10 p-4 border border-transparent rounded-md shadow-xs font-semibold transition-all duration-200 text-[var(--brown)] 
                                     ${isSubmitting
