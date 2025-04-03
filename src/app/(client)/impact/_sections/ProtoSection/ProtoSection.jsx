@@ -29,8 +29,8 @@ export default function ProtoSection() {
                     <DescriptionText content={"See OneTAC's potential come to life through real-world prototypes. From AI-powered travel discovery to seamless cultural bookings, these prototypes showcase how OneTAC enables innovation across tourism, arts, and culture."} />
 
                     <div className="flex flex-col sm:flex-row xl:flex-col gap-4">
-                        <PrototypeButton label="View Traveller Prototype" onClick={() => togglePopup("https://www.youtube.com/embed/R-PhUyuoVb8")} />
-                        <PrototypeButton label="View Practitioner Prototype" onClick={() => togglePopup("https://www.youtube.com/embed/Zp83fW6Thxg")} />
+                        <PrototypeButton label="View Traveller Prototype" onClick={() => togglePopup("https://www.youtube.com/embed/zMl8R97Te4o")} />
+                        <PrototypeButton label="View Practitioner Prototype" onClick={() => togglePopup("https://www.youtube.com/embed/R-PhUyuoVb8")} />
                     </div>
                 </div>
 
@@ -48,6 +48,7 @@ export default function ProtoSection() {
             <AnimatePresence>
                 {isOpen && (
                     <div
+                        onClick={() => togglePopup()}
                         className="fixed inset-0 px-4 bg-black/20 backdrop-blur-xs flex justify-center items-center z-50"
                     >
                         <button onClick={() => togglePopup()} className="bg-[var(--brown)] text-white shadow w-10 h-10 p-2 rounded-full flex items-center justify-center hover:scale-110 transition duration-300 absolute top-4 right-4 text-xl">✕</button>
@@ -56,7 +57,7 @@ export default function ProtoSection() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 50 }}
                             transition={{ duration: 0.3 }}
-                            className="shadow-lg max-w-3xl w-full relative"
+                            className="max-w-3xl w-full relative"
                         >
                             <div className="relative w-full h-[80vh]">
                                 <iframe
