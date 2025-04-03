@@ -1,12 +1,26 @@
-import Image from "next/image"
-import Link from "next/link"
-import ProtoImg from '@/../public/assets/impact/prototype.webp'
-import HeaderText from "@/Components/Header/Header"
-import DescriptionText from "@/Components/Description/Description"
+'use client'
 
-const HeaderContext = `See It in Action:\n Explore the Prototype`
+import { useState } from "react";
+import Image from "next/image";
+import ProtoImg from '@/../public/assets/impact/prototype.webp';
+import HeaderText from "@/Components/Header/Header";
+import DescriptionText from "@/Components/Description/Description";
+import PrototypeButton from "./button";
+import { motion, AnimatePresence } from "framer-motion";
+
+const HeaderContext = `See It in Action:
+
+Explore the Prototype`;
 
 export default function ProtoSection() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [videoUrl, setVideoUrl] = useState("");
+
+    const togglePopup = (url = "") => {
+        setIsOpen(!isOpen);
+        setVideoUrl(url);
+    };
+
     return (
         <div className="px-4 py-10 md:p-8 lg:p-16">
             <div className="p-6 sm:p-8 xl:p-14 flex flex-col justify-between xl:flex-row gap-8 bg-white rounded-3xl">
@@ -15,28 +29,8 @@ export default function ProtoSection() {
                     <DescriptionText content={"See OneTAC's potential come to life through real-world prototypes. From AI-powered travel discovery to seamless cultural bookings, these prototypes showcase how OneTAC enables innovation across tourism, arts, and culture."} />
 
                     <div className="flex flex-col sm:flex-row xl:flex-col gap-4">
-                        <Link
-                            href='#'
-                            aria-label="View Traveller Prototype"
-                            className={`
-                        w-fit z-10 bg-[var(--light-Orange)] border border-white text-base 2xl:text-xl text-[var(--brown)]
-                        font-semibold py-2 px-6 xl:px-8 rounded-lg cursor-pointer transition duration-300 shadow-lg
-                        hover:-translate-y-2 hover:border-[var(--light-Orange)] hover:shadow-2xl hover:bg-amber-200
-                    `}
-                        >
-                            View Traveller Prototype
-                        </Link>
-                        <Link
-                            href='#'
-                            aria-label="View Practitioner Prototype"
-                            className={`
-                        w-fit z-10 bg-[var(--light-Orange)] border border-white text-base 2xl:text-xl text-[var(--brown)]
-                        font-semibold py-2 px-6 xl:px-8 rounded-lg cursor-pointer transition duration-300 shadow-lg
-                        hover:-translate-y-2 hover:border-[var(--light-Orange)] hover:shadow-2xl hover:bg-amber-200
-                    `}
-                        >
-                            View  Practitioner Prototype
-                        </Link>
+                        <PrototypeButton label="View Traveller Prototype" onClick={() => togglePopup("https://www.youtube.com/embed/R-PhUyuoVb8")} />
+                        <PrototypeButton label="View Practitioner Prototype" onClick={() => togglePopup("https://www.youtube.com/embed/Zp83fW6Thxg")} />
                     </div>
                 </div>
 
@@ -50,6 +44,33 @@ export default function ProtoSection() {
                     />
                 </div>
             </div>
+
+            <AnimatePresence>
+                {isOpen && (
+                    <div
+                        className="fixed inset-0 px-4 bg-black/20 backdrop-blur-xs flex justify-center items-center z-50"
+                    >
+                        <button onClick={() => togglePopup()} className="bg-[var(--brown)] text-white shadow w-10 h-10 p-2 rounded-full flex items-center justify-center hover:scale-110 transition duration-300 absolute top-4 right-4 text-xl">✕</button>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 50 }}
+                            transition={{ duration: 0.3 }}
+                            className="shadow-lg max-w-3xl w-full relative"
+                        >
+                            <div className="relative w-full h-[80vh]">
+                                <iframe
+                                    className="w-full h-full rounded-xl"
+                                    src={videoUrl}
+                                    title="Prototype Video"
+                                    allow="autoplay; encrypted-media"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
         </div>
-    )
+    );
 }

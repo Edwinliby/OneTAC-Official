@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,12 +22,6 @@ const images = [
 ];
 
 export default function Home() {
-    const [isWideScreen, setIsWideScreen] = useState(false);
-
-    useEffect(() => {
-        setIsWideScreen(window.innerWidth >= 768);
-    }, []);
-
     return (
         <div className="flex flex-col gap-8 md:gap-10 md:py-10 lg:py-24">
             <motion.section
@@ -39,7 +32,7 @@ export default function Home() {
                 className="px-4 md:px-8 lg:px-16 text-left"
             >
                 <h1 className="relative text-[var(--brown)] text-[2rem] md:text-4xl lg:text-5xl 3xl:text-6xl font-semibold md:leading-12 lg:leading-16 3xl:leading-20">
-                    Giving India's Stories the Stage They Deserve:
+                    Giving India's Stories the Stage They Deserve
                     <motion.span
                         initial={{ scaleX: 0 }}
                         whileInView={{ scaleX: 1 }}
