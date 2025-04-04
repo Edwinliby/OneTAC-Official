@@ -25,7 +25,7 @@ export const metadata = {
   url: 'https://onetac.org/',
 
   ogTitle: "One TAC | Tourism, Art and Culture",
-  ogDescription: "Partner with Volshauz for expert web development, branding, UI/UX design, and marketing solutions. Empower your brand’s online presence with tailored strategies to boost engagement and growth.",
+  ogDescription: "OneTAC is a unified network transforming tourism by making India's stories, experiences, and opportunities accessible to all.",
   ogUrl: 'https://onetac.org/',
   ogSiteName: "One TAC | Tourism, Art and Culture",
 
