@@ -2,7 +2,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { keywords } from "../lib/keywords";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -44,6 +44,7 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-title" content="OneTAC" />
       </head>
       <GoogleTagManager gtmId="GTM-MG4ZCXSH" />
+      <GoogleAnalytics gaId="G-BRCKBKWJ6X" />
       <body
         className={`${plusJakartaSans.variable} ${argaka.variable} ${telma.variable} antialiased`}
       >
