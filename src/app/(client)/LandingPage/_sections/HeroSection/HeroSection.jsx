@@ -48,7 +48,7 @@ export default function HeroSection() {
                     style={{ opacity, translateY }}
                 >
                     <p className="italic font-bold px-8 text-xs md:text-sm 2xl:text-lg">
-                        Discover more. Connect more. Experience
+                        Discover more. Connect more. Experience More
                     </p>
                     <h1 className="w-full text-center font-telma text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl leading-12 md:leading-18 xl:leading-22 2xl:leading-28 sm:whitespace-nowrap">
                         Unlock India's soul <br /> with OneTAC
